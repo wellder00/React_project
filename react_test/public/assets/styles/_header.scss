@@ -1,0 +1,30 @@
+.header {
+  height: 86px;
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+
+.header__menu-list {
+  display: flex;
+  list-style: none;
+  gap: 25%;
+  white-space: nowrap;
+  li {
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+  li::after {
+    content: url(../icons/2.svg);
+    margin-left: 13px;
+  }
+}
