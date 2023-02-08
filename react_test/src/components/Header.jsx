@@ -3,7 +3,7 @@ import React from 'react';
 import ButtonFunc from './ButtonFunc';
 
 function But() {
-  return (
+  return (   
     <div className="header">
       <div className="header-container _container">
         <a href="#!" className="logo header__logo">
@@ -12,16 +12,16 @@ function But() {
         <nav className="header__nav">
           <ul className="header__menu-list">
             <li>
-              <a href=""> Про нас</a>
+              <a href="#!"> Про нас</a>
             </li>
             <li>
-              <a href="">Проєкти</a>
+              <a href="#!">Проєкти</a>
             </li>
             <li>
-              <a href="">Контакти</a>
+              <a href="#!">Контакти</a>
             </li>
             <li>
-              <a href="">УКР</a>
+              <a href="#!">УКР</a>
             </li>
           </ul>
         </nav>

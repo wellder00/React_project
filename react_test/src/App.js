@@ -1,11 +1,14 @@
 import './App.scss';
 
-import {Header, } from "./components";
+import {Header, HeroBlock, CurrentNeeds, HowYouCanHelp} from "./components";
 
 function App() {
    return (
     <div>
-      <Header />         
+      <Header/> 
+      <HeroBlock/> 
+      <CurrentNeeds/>       
+      <HowYouCanHelp/>       
     </div>
   );
 }

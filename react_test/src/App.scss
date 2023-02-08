@@ -1,11 +1,20 @@
 @import '../public/assets/styles/varibles';
 @import '../public/assets/styles/syle-button.scss';
 @import '../public/assets/styles/header.scss';
+@import '../public/assets/styles/hero-block.scss';
+@import '../public/assets/styles/currentNeeds.scss';
+@import '../public/assets/styles/HowYouCanHelp.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&family=Poppins:wght@400;500;700&family=Volkhov:wght@700&display=swap');
 
 body {
   height: 100%;
   background-color: gray;
-  color: black;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  @include fluidFontSize(16px, 20px, 480px, 1280px, 18px);
+  line-height: 130%;
+  color: #000000;
 }
 
 .wrapper {
@@ -17,5 +26,5 @@ body {
 ._container {
   max-width: 1240px;
   margin: 0px auto;
+  padding: 0 15px;
 }
-

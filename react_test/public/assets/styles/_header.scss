@@ -1,21 +1,21 @@
 .header {
   height: 86px;
-  background: #1e1e1e;
+  background: $bg-header;
   color: #ffffff;
+  padding-top: 18px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
-  padding-top: 18px;
+  justify-content: space-between;  
 }
 
 .header__menu-list {
   display: flex;
   list-style: none;
-  gap: 25%;
+  gap: 15%;
   white-space: nowrap;
   li {
     a {
