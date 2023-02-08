@@ -164,4 +164,27 @@
   }
 }
 
+.button-block__some-stats-button {
+  position: absolute;
+  margin: 783px 100px 100px 1117px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 223px;
+  height: 60px;
+  border-radius: 100px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  padding-right: 100px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+}
+
 
