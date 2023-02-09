@@ -1,6 +1,6 @@
 import './App.scss';
 
-import {Header, HeroBlock, CurrentNeeds, HowYouCanHelp, SomeStats} from "./components";
+import {Header, HeroBlock, CurrentNeeds, HowYouCanHelp, SomeStats, Support} from "./components";
 
 function App() {
    return (
@@ -9,7 +9,8 @@ function App() {
       <HeroBlock/> 
       <CurrentNeeds/>       
       <HowYouCanHelp/>
-      <SomeStats/>       
+      <Support/>  
+      <SomeStats/>           
     </div>
   );
 }
