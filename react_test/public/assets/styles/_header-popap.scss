@@ -1,4 +1,4 @@
-.popap-about-us {
+.popup-about-us {
   color: rgb(194, 13, 37);
   background-color: white;
   position: absolute;
@@ -6,22 +6,27 @@
   width: auto;
   z-index: 1;
   top: 66px;
-  transform: translate(-35%, 0);
- 
+  transform: translate(-35%, 0); 
 }
 
-.popap-ul {
+.popup-ul {
   padding: 0;
 }
 
-.popap-li {
+.popup-li {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(0, 0, 0);
+  color: black;
   width: auto;
   height: 57px;
   list-style: none;
   padding: 8px;
   border-bottom: 3px solid rgba(128, 128, 128, 0.164);
+  padding: 8px 24px 8px 16px;
+  cursor: pointer;
+  &:hover{
+    background-color: rgba(31, 30, 27, 0.1);
+  }
 }
+
