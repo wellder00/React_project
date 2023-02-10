@@ -5,3 +5,5 @@ export {default as CurrentNeeds} from "./CurrentNeeds";
 export {default as HowYouCanHelp} from "./HowYouCanHelp";
 export {default as SomeStats} from "./SomeStats";
 export {default as Support} from "./Support";
+export {default as SuccessfulStories} from "./SuccessfulStories";
+//export {default as HeaderPopap} from "./HeaderPopap";

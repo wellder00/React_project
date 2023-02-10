@@ -18,13 +18,19 @@
   gap: 15%;
   white-space: nowrap;
   li {
+    position: relative;
     a {
+      display: inline;
       color: #ffffff;
       text-decoration: none;
+    
     }
   }
-  li::after {
+  .header-symbol{
+    display: inline;
     content: url(../icons/2.svg);
     margin-left: 13px;
   }
+
 }
+

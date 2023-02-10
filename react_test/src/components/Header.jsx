@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ButtonFunc from './ButtonFunc';
+import HeaderPopap from './HeaderPopap';
 
 function But() {
   return (   
@@ -12,10 +13,11 @@ function But() {
         <nav className="header__nav">
           <ul className="header__menu-list">
             <li>
-              <a href="#!"> Про нас</a>
+              <a href="#!">Про нас <div className='header-symbol'></div> </a>
+              <HeaderPopap className = 'popap-about-us' items = {['Мета та історія', 'Команда та партнери', 'Документація та звітність']}/>
             </li>
             <li>
-              <a href="#!">Проєкти</a>
+              <a href="#!">Проєкти</a>              
             </li>
             <li>
               <a href="#!">Контакти</a>

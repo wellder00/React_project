@@ -1,0 +1,26 @@
+.successful-stories {
+  margin-top: 134px;
+  margin-bottom: 100px;
+  p {
+    width: 380px;
+    margin-bottom: 48px;
+  }
+}
+
+.card-block-stories-wrapper {
+  display: flex;
+  gap: 3%;
+  section {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #1f1f1f;
+    margin-top: 48px;
+  }
+}
+
+.button-single-story{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 64px;
+}

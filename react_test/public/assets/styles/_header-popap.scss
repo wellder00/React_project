@@ -1,0 +1,27 @@
+.popap-about-us {
+  color: rgb(194, 13, 37);
+  background-color: white;
+  position: absolute;
+  padding: 0;
+  width: auto;
+  z-index: 1;
+  top: 66px;
+  transform: translate(-35%, 0);
+ 
+}
+
+.popap-ul {
+  padding: 0;
+}
+
+.popap-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  width: auto;
+  height: 57px;
+  list-style: none;
+  padding: 8px;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.164);
+}
