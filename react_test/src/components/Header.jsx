@@ -62,7 +62,7 @@ const handleOutsiteClick3 = (e) => {
           <ul className="header__menu-list">
             <li ref={sortRef1}>
               <a onClick={togglevisiblePopup1} href="#!">
-                Про нас <div className="header-symbol"></div>
+                Про нас <div className={visiblePopup1 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup1 && (
                 <Headerpopup
@@ -74,7 +74,7 @@ const handleOutsiteClick3 = (e) => {
 
             <li ref={sortRef2}>
               <a onClick={togglevisiblePopup2} href="#!">
-                Проєкти<div className="header-symbol"></div>
+                Проєкти<div className={visiblePopup2 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup2 && (
                 <Headerpopup className="popup-about-us" items={['Поточні', 'Успішні історії']} />
@@ -87,7 +87,7 @@ const handleOutsiteClick3 = (e) => {
             </li>
             <li ref={sortRef3}>
               <a onClick={togglevisiblePopup3} href="#!">
-                УКР<div className="header-symbol"></div>
+                УКР<div className={visiblePopup3 ? 'rotade' : 'header-symbol'}></div>
               </a >
               {visiblePopup3 && (
                 <Headerpopup className="popup-about-us" items={['Українська', 'English']} />
