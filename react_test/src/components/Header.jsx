@@ -4,37 +4,55 @@ import ButtonFunc from './ButtonFunc';
 import Headerpopup from './HeaderPopup';
 
 function But() {
-  const[visivlePopup1, setvisivlePopup1] = React.useState(false);
-  const[visivlePopup2, setvisivlePopup2] = React.useState(false);
-  const[visivlePopup3, setvisivlePopup3] = React.useState(false);
+  const [visiblePopup1, setvisiblePopup1] = React.useState(false);
+  const [visiblePopup2, setvisiblePopup2] = React.useState(false);
+  const [visiblePopup3, setvisiblePopup3] = React.useState(false);
+    const sortRef1 = React.useRef();
+    const sortRef2 = React.useRef();
+    const sortRef3 = React.useRef();
 
-  const sortRef1 = React.useRef();
+  
+  const togglevisiblePopup1 = () => {
+    setvisiblePopup1(!visiblePopup1);
+  };
+  const togglevisiblePopup2 = () => {
+    setvisiblePopup2(!visiblePopup2);
+  };
+  const togglevisiblePopup3 = () => {
+    setvisiblePopup3(!visiblePopup3);
+  };
 
-  const toggleVisiblePopup1 = () => {
-     setvisivlePopup1(!visivlePopup1)
+  const handleOutsiteClick1 = (e) => {
+      let path = e.path || (e.composedPath && e.composedPath());
+      if (!path.includes(sortRef1.current)) {
+        setvisiblePopup1(false)
+      }
   }
-  const togglevisivlePopup2 = () => {
-    setvisivlePopup2(!visivlePopup2)
- }
-
- const togglevisivlePopup3 = () => {
-  setvisivlePopup3(!visivlePopup3)
+  const handleOutsiteClick2 = (e) => {
+    let path = e.path || (e.composedPath && e.composedPath());
+    if (!path.includes(sortRef2.current)) {
+      setvisiblePopup2(false)
+    }
 }
-
-const handleOutsideClick1 = (e) => {
+const handleOutsiteClick3 = (e) => {
   let path = e.path || (e.composedPath && e.composedPath());
-  if (!path.includes(sortRef1.current)){
-    setvisivlePopup1(false)
-    
+  if (!path.includes(sortRef3.current)) {
+    setvisiblePopup3(false)
   }
 }
 
-React.useEffect(() => {
-  document.body.addEventListener('click', handleOutsideClick1)
-}, [])
+  React.useEffect(() => {
+   document.body.addEventListener('click', handleOutsiteClick1)
+  }, [])
+  React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsiteClick2)
+   }, [])
+   React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsiteClick3)
+   }, [])
+  
 
-
-  return (   
+  return (
     <div className="header">
       <div className="header-container _container">
         <a href="#!" className="logo header__logo">
@@ -42,20 +60,38 @@ React.useEffect(() => {
         </a>
         <nav className="header__nav">
           <ul className="header__menu-list">
-            <li ref={sortRef1} onClick={toggleVisiblePopup1}>
-              <a href="#!">Про нас <div className='header-symbol'></div> </a>
-              {visivlePopup1 && (<Headerpopup className = 'popup-about-us' items = {['Мета та історія', 'Команда та партнери', 'Документація та звітність']}/>)}
+            <li ref={sortRef1}>
+              <a onClick={togglevisiblePopup1} href="#!">
+                Про нас <div className="header-symbol"></div>
+              </a>
+              {visiblePopup1 && (
+                <Headerpopup
+                  className="popup-about-us"
+                  items={['Мета та історія', 'Команда та партнери', 'Документація та звітність']}
+                />
+              )}
             </li>
-            <li onClick={togglevisivlePopup2}>
-              <a href="#!">Проєкти<div className='header-symbol'></div> </a> 
-              {visivlePopup2 &&(<Headerpopup className = 'popup-about-us' items = {['Поточні', 'Успішні історії']}/>)}            
+
+            <li ref={sortRef2}>
+              <a onClick={togglevisiblePopup2} href="#!">
+                Проєкти<div className="header-symbol"></div>
+              </a>
+              {visiblePopup2 && (
+                <Headerpopup className="popup-about-us" items={['Поточні', 'Успішні історії']} />
+              )}
             </li>
             <li>
-              <a href="#!">Контакти<div className='header-symbol'></div> </a>
+              <a href="#!">
+                Контакти<div className="header-symbol"></div>
+              </a>
             </li>
-            <li onClick={togglevisivlePopup3}>
-              <a href="#!">УКР<div className='header-symbol'></div> </a>
-              {visivlePopup3 &&(<Headerpopup className = 'popup-about-us' items = {['Українська', 'English' ]}/>)}
+            <li ref={sortRef3}>
+              <a onClick={togglevisiblePopup3} href="#!">
+                УКР<div className="header-symbol"></div>
+              </a >
+              {visiblePopup3 && (
+                <Headerpopup className="popup-about-us" items={['Українська', 'English']} />
+              )}
             </li>
           </ul>
         </nav>

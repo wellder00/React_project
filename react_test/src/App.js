@@ -6,7 +6,7 @@ function App() {
    return (
     <div>
       <Header/> 
-      <HeroBlock/> 
+      <HeroBlock/>       
       <CurrentNeeds/>       
       <HowYouCanHelp/>
       <Support/>  

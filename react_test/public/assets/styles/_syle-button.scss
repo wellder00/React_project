@@ -4,6 +4,9 @@
   height: 48px;
   margin-left: 30px;
   cursor: pointer;
+  &:hover{
+    background-color: #10bd01;
+  }
 }
 
 .hero-button {
@@ -16,6 +19,9 @@
     position: relative;
     top: 10%;
   }
+  &:hover{
+    background-color: #10bd01;
+  }
 }
 
 .card-block__buttons {
@@ -24,6 +30,9 @@
   border: 0;
   height: 48px;
   cursor: pointer;
+  &:hover{
+    background-color: #10bd01;
+  }
 }
 
 .card-block__singl-button {
