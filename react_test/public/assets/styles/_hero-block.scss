@@ -1,9 +1,13 @@
 .herro {
+  margin: 0 auto;
   padding-top: 100px;  
+  width: 1440px;
+  overflow: hidden;
 }
 .wrapper-herro {
   display: flex;
   justify-content: space-between;
+  
 }
 .content-block {
   flex: 0 0 40%;

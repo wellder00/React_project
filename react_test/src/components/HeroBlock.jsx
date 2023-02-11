@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ButtonFunc from './ButtonFunc';
+import SwiperHero from './SwiperHero';
 
 function But() {
   return (
@@ -16,8 +17,8 @@ function But() {
          <ButtonFunc class="hero-button">Допомогти <img src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
          
         </div>
-        <div className="img-block">
-          <img src="/assets/image/1.jpg" alt="" />
+        <div className="herro-img-block">
+         <SwiperHero/>
         </div>
       </div>
     </div>
