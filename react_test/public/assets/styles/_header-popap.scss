@@ -4,16 +4,17 @@
   position: absolute;
   padding: 0;
   width: auto;
-  z-index: 1;
+  z-index: 3;
   top: 66px;
-  transform: translate(-27%, 0); 
+  transform: translate(-27%, 0);
+  
 }
 
 .popup-ul {
   padding: 0;
 }
 
-.popup-li {
+.popup-li { 
   display: flex;
   justify-content: center;
   align-items: center;

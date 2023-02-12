@@ -1,7 +1,7 @@
 .herro-img-block{
-  position: relative;
-  
+  position: relative;  
   left: 100px;
+  height: 614px; 
 }
 .mySwiper{
   width: 773px;
@@ -12,17 +12,15 @@
   width: 100%;
   height: 100%;
 }
-
-.swiper-button-prev::after{
-  display: none;
+.swiper-image-block{
+  height: 100%;
 }
 
-.swiper-button-next{
-  display: none;
-  position: relative;  
-}
-.swiper-button-next::after{  
-  margin-right: 200px;
-  margin-top: 500px;
+.button-next-slide{
+  position: absolute;
+  background-color: red;
+  width: 100px;
+  height: 100px;
   
 }
+

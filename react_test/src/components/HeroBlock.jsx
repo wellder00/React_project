@@ -18,7 +18,7 @@ function But() {
          
         </div>
         <div className="herro-img-block">
-         <SwiperHero/>
+         <SwiperHero/>         
         </div>
       </div>
     </div>

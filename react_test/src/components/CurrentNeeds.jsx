@@ -2,6 +2,7 @@ import React from 'react';
 
 import ButtonFunc from './ButtonFunc';
 
+
 function But() {
   return (
     <div className="currentNeeds">

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ButtonFunc from './ButtonFunc';
+import CurrentSwiper from './CurrentSwiper';
 
 function But() {
   return (
@@ -10,8 +11,8 @@ function But() {
         <p>Зараз для нас є важливим закриття 4 найважливіших потреб:</p>
         <div className="card-block-stories-wrapper">
           <div className="card-block-stories">
-            <div>
-              <img src="/assets/image/story1.jpg" alt="card" />
+            <div className='card-block-stories-img'>
+              <CurrentSwiper/>
             </div>
             <h4>Подарунки до дітей на новорічні свята</h4>
             <span>
