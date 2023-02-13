@@ -16,7 +16,7 @@ function Slider() {
         prevEl:'.button-prev-slide',
       }}      
       spaceBetween={40}
-      slidesPerView={1}
+      slidesPerView={1.3}
           >
       <SwiperSlide>      
           <div className="swiper-image-block">
