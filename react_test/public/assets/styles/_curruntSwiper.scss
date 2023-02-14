@@ -13,10 +13,12 @@
 }
 
 .current-swiper__button-next-slide-block {
+  
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto; 
+  z-index: 5;
 }
 
 .current-swiper__button-prev-slide {
@@ -47,4 +49,12 @@
 
 .last-block{
   margin-bottom: 20px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom,8px);
+  top: var(--swiper-pagination-top,auto);
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }

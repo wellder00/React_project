@@ -22,8 +22,8 @@ function But() {
             <section>Nov 22, 2022</section>
           </div>
           <div className="card-block-stories">
-            <div>
-              <img src="/assets/image/story1.jpg" alt="card" />
+          <div className='card-block-stories-img'>
+              <CurrentSwiper/>
             </div>
             <h4>Видачу корму для родин, що прихистили безпритульних тварин</h4>
             <span>
@@ -33,8 +33,8 @@ function But() {
             <section>Nov 22, 2022</section>
           </div>
           <div className="card-block-stories">
-            <div>
-              <img src="/assets/image/story1.jpg" alt="card" />
+          <div className='card-block-stories-img'>
+              <CurrentSwiper/>
             </div>
             <h4>Допомога малобільним людям</h4>
             <span>

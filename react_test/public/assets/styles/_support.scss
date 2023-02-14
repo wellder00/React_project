@@ -75,7 +75,43 @@
       border-bottom: 1px solid black;
       resize: none;
       padding-left: 16px;
+      &:focus {
+        outline: none !important;
+      }
     }
+  }
+}
+.right-block-name3__active-error {
+  width: 496px;
+  height: 173px;
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 4px 4px 0px 0px;
+  margin-bottom: 24px;
+  border: none;
+  border-bottom: 2px solid rgb(252, 0, 0);
+  resize: none;
+  padding-left: 16px;
+  &:focus {
+    outline: none !important;
+  }
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #f22b2b;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #f22b2b;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #f22b2b;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #f22b2b;
+  }
+  &:focus {
+    outline: none !important;
   }
 }
 

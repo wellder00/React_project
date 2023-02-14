@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import ButtonFunc from './ButtonFunc';
 
 function But() {
   const [name, setName] = useState('');
@@ -15,10 +14,19 @@ function But() {
   const [emeilError, setEmeilError] = useState('*Це поле є обов’язковим до заповнення');
   const [numberError, setNumberError] = useState('*Це поле є обов’язковим до заповнення');
   const [textError, setTextError] = useState('*Це поле є обов’язковим до заповнення');
+  const[formValid, setFormValid] = useState(false)
 
-  console.log(!numberError)
+  useEffect (() => {
+    if (nameError || emeilError || numberError || textError){
+      setFormValid(false)
+    } else {
+      setFormValid(true)
+    }
+  
+   
+  }, [nameError, emeilError, numberError, textError])
+  
 
-  console.log(numberError);
 
   const nameHandler = (e) => {
     setName(e.target.value);
@@ -82,8 +90,14 @@ function But() {
       case 'text':
         setTextDirty(true);
         break;
+        default:
+          // unknown type! based on the language,
+          // there should probably be some error-handling
+          // here, maybe an exception
     }
   };
+
+ console.log(!nameError)
 
   return (
     <div className="support">
@@ -107,7 +121,7 @@ function But() {
                 value={name}
                 onBlur={(e) => blurHandler(e)}
                 name="name"
-                className={!nameError ? 'right-block-name' : 'active-error'}
+                className={nameError && nameDirty ?  'active-error' :  'right-block-name' }
                 type="text"
                 placeholder="Ваше ім’я"
                 required
@@ -118,7 +132,7 @@ function But() {
               <input
                 onChange={(e) => emailHandler(e)}
                 value={email}
-                className="right-block-name"
+                className={emeilError && emailDirty ?  'active-error' :  'right-block-name' }
                 onBlur={(e) => blurHandler(e)}
                 name="email"
                 type="email"
@@ -131,7 +145,7 @@ function But() {
               <input
                 onChange={(e) => numberHandler(e)}
                 value={number}
-                className="right-block-name"
+                className={numberError && numberDirty ?  'active-error' :  'right-block-name' }
                 onBlur={(e) => blurHandler(e)}
                 name="tel"
                 type="tel"
@@ -146,7 +160,7 @@ function But() {
                 onChange={(e) => textHandler(e)}
                 value={text}
                 onBlur={(e) => blurHandler(e)}
-                className="right-block-name3"
+                className={textError && textDirty ?  'right-block-name3__active-error' :  'right-block-name3' }
                 name="text"
                 placeholder="Повідомлення"
                 required
@@ -157,9 +171,9 @@ function But() {
             </div>
             <div className="right-block-checkbox">
               <input type="checkbox" required />
-              <label className="right-block-check">Я погоджуюся з політикою конфіденційності</label>
+              <label className={"right-block-check"}>Я погоджуюся з політикою конфіденційності</label>
             </div>
-            <ButtonFunc class="support-button">Відправити форму</ButtonFunc>
+            <button disabled = {!formValid} class={formValid ? "support-button" : 'support-button__disabled'}>Відправити форму</button>
           </form>
         </div>
       </div>

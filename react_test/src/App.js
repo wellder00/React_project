@@ -9,7 +9,7 @@ import {
   SomeStats,
   Support,
   SuccessfulStories,
-  
+  Footer,  
 } from './components';
 
 
@@ -23,6 +23,7 @@ function App() {
       <Support />
       <SomeStats />
       <SuccessfulStories />
+      <Footer />
     </div>
   );
 }

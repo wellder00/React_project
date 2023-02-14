@@ -16,9 +16,9 @@ function Slider() {
         prevEl:'.button-prev-slide',
       }}      
       spaceBetween={40}
-      slidesPerView={1.3}
+      slidesPerView={1}
           >
-      <SwiperSlide>      
+      <SwiperSlide>            
           <div className="swiper-image-block">
         <img className='swiper-img' src="/assets/image/1.jpg" alt="1" />
         </div>
@@ -28,7 +28,7 @@ function Slider() {
         <img className='swiper-img swiper-img2' src="/assets/image/cur4.jpg" alt="1" />
         </div>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide>        
       <div className="swiper-image-block">
         <img className='swiper-img' src="/assets/image/cur2.jpg" alt="1" />
         </div>
