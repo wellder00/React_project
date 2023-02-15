@@ -9,6 +9,9 @@ export {default as SuccessfulStories} from "./SuccessfulStories";
 export {default as Swiper} from "./SwiperHero";
 export {default as CurrentSwiper} from "./CurrentSwiper";
 export {default as Footer} from "./Footer";
+export {default as SuccessfulStoriesPopap} from "./SuccessfulStoriesPopap";
+export {default as SuccessfulStoriesPopapSwiper} from "./SuccessfulStoriesPopapSwiper";
+
 
 
 //export {default as HeaderPopap} from "./HeaderPopap";

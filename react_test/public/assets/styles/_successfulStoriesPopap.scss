@@ -1,0 +1,45 @@
+.myModal__bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+.myModal__popap{
+  position: relative;
+  background-color: #F1F1F1;
+  background-repeat: 20px;
+  padding: 30px; 
+  margin-bottom: 400px;
+}
+
+.myModal__popap_close{
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  border: 0;
+  z-index: 40;
+  cursor: pointer;
+}
+
+.myModal__bg_content{
+  display: flex;
+  gap: 40px;
+}
+
+.myModal__bg_content_right-block{
+  width: 457px;
+  position: relative;
+  padding-right: 92px;
+  padding-bottom: 150px;
+  span{
+    position: absolute;
+    bottom: 0;
+  }
+}

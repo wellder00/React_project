@@ -3,7 +3,7 @@
   height: 100px;
 }
 
-.current-swiper__rard-block {
+.current-swiper__card-block {
   width: 100%;
   height: 100%;
   img {
@@ -13,47 +13,61 @@
 }
 
 .current-swiper__button-next-slide-block {
-  
   width: 90%;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto; 
+  margin: 0 auto;
   z-index: 5;
 }
 
 .current-swiper__button-prev-slide {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: 50%;
   z-index: 5;
-  width: 25px;
-  height: 25px;
-  img{
-    width: 100%;
-    height: 100%;
+  width: 50px;
+  height: 50px;
+  img {
+    width: 50%;
+    height: 50%;
   }
-  
+  &:hover {
+    background: rgba(31, 30, 27, 0.1);
+  }
 }
+
 .current-swiper__button-next-slide {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: 50%;
   z-index: 5;
-  width: 25px;
-  height: 25px;
-  img{
-    width: 100%;
-    height: 100%;
+  width: 50px;
+  height: 50px;
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  &:hover {
+    background: rgba(31, 30, 27, 0.1);
   }
 }
 
-.last-block{
-  margin-bottom: 20px;
+.last-block {
+  margin-bottom: 10px;  
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: var(--swiper-pagination-bottom,8px);
-  top: var(--swiper-pagination-top,auto);
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
   left: 0;
   width: 100%;
   z-index: 1;

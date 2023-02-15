@@ -3,7 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper-bundle.min.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-function CurrentSwiper() {
+function CurrentSwiper({index, handleClick}) {
+  const imgArr = [
+    {src: '/assets/image/1.jpg'},
+    {src: '/assets/image/cur4.jpg'},
+    {src: '/assets/image/cur2.jpg'}
+  ];
   return (
     <div className="current-swiper">
       <Swiper
@@ -17,28 +22,27 @@ function CurrentSwiper() {
         spaceBetween={0}
         slidesPerView={1}
       >
-        <SwiperSlide>
-          <div className="current-swiper__rard-block">
-            <img src="/assets/image/1.jpg" alt="1" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="current-swiper__rard-block">
-            <img src="/assets/image/cur4.jpg" alt="1" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='last-block'>
-          <div className="current-swiper__rard-block">
-            <img src="/assets/image/cur2.jpg" alt="1" />
-          </div>
-        </SwiperSlide>
+        {
+          imgArr.map(img=>
+            <SwiperSlide onClick={() => handleClick(true, index)}>
+            <div className="current-swiper__card-block">
+              <img src={img.src} alt="1" />
+            </div>
+          </SwiperSlide>
+          )
+        }
+
         <div className="current-swiper__button-next-slide-block">
+          
           <div className="current-swiper__button-prev-slide">
             <img src="/assets/icons/arrowLeft.svg" alt="" />
           </div>
+         
+         
           <div className="current-swiper__button-next-slide">
             <img src="/assets/icons/arrowRight.svg" alt="" />
           </div>
+          
         </div>
       </Swiper>
     </div>
