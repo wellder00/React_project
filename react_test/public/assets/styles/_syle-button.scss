@@ -53,6 +53,24 @@
   }
 }
 
+.card-block__some-stats-button {
+  width: 223px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 14px 50px 15px 0px;
+  position: relative;
+  cursor: pointer;
+  .card-block__singl-button-arrow {
+    position: absolute;
+    top: 17px;
+    right: 7px;
+  }
+  &:hover{
+    background-color: #DDDDDD;
+  }
+}
+
 .donat-button2 {
   width: 498px;
   height: 53px;
