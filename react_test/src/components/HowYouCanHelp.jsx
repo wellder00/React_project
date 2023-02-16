@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ButtonFunc from './ButtonFunc';
 
+function CurrencyButton(props){
+  return(
+    <input type="radio" name="can-help-button" value={props.valueName} id={props.idName} onClick={props.onClickFunction}/>
+  )
+};
+
+const money = {
+  UAH: [100, 200, 500],
+  USD: [50, 100, 200],
+  EUR: [50, 100, 200]
+};
+
 function But() {
+  const [currency, setCurrency] = useState("UAH");
+  const moneyCounts = money[currency];
+
   return (
     <div className="can-help">
       <div className="can-help_wrapper _container">
@@ -23,22 +38,24 @@ function But() {
               поїхати та неймовірна кількість тварин, що опинилася на вулиці.
               <div>Ви можете допомогти їм зробивши донат:</div>
             </div>
+            <form>
             <div className="donat-block__first-button-block">
-              <ButtonFunc class="can-help-button">UAH</ButtonFunc>
-              <ButtonFunc class="can-help-button">USD</ButtonFunc>
-              <ButtonFunc class="can-help-button">EUR</ButtonFunc>
+              <CurrencyButton valueName="first-currency" idName="first-currency" onClickFunction={() => setCurrency("UAH")}></CurrencyButton><label for="first-currency" id="first-currency-label">UAH</label>
+              <CurrencyButton valueName="second-currency" idName="second-currency" onClickFunction={() => setCurrency("USD")}></CurrencyButton><label for="second-currency" id="second-currency-label">USD</label>
+              <CurrencyButton valueName="third-currency" idName="third-currency" onClickFunction={() => setCurrency("EUR")}></CurrencyButton><label for="third-currency" id="third-currency-label">EUR</label>
             </div>
             <div className="donat-block__second-button-block">
-              <ButtonFunc class="can-help-button">100</ButtonFunc>
-              <ButtonFunc class="can-help-button">200</ButtonFunc>
-              <ButtonFunc class="can-help-button">500</ButtonFunc>
-            </div>
+              <input type="checkbox" name="can-help-button2" value="first-number" id="first-number" /><label for="first-number">{moneyCounts[0]}</label>
+              <input type="checkbox" name="can-help-button2" value="second-number" id="second-number" /><label for="second-number">{moneyCounts[1]}</label>
+              <input type="checkbox" name="can-help-button2" value="third-number" id="third-number" /><label for="third-number">{moneyCounts[2]}</label>
+            </div>     
             <input type="number" placeholder="Запропонувати іншу сумму" />
             <div className="donat-block__third-button-block">
-              <ButtonFunc class="donat-button1">
+              <ButtonFunc class="donat-button1" type="submit">
                 Донат за допомогою картки<img src="/assets/icons/help1.svg" alt="button-img"></img>
               </ButtonFunc>
             </div>
+            </form>
             <div className="donat-block__fourth-button-block">
               <ButtonFunc class="donat-button2">
                 Донат за допомогою картки<img src="/assets/icons/help2.svg" alt="button-img"></img>
