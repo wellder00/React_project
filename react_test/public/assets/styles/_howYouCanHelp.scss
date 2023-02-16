@@ -12,7 +12,7 @@
   a {
     text-decoration: none;
     color: #000000;
-    cursor: auto
+    cursor: auto;
   }
   h2 {
     @include fluidFontSize(30px, 40px, 480px, 1280px, 35px);
