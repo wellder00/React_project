@@ -15,11 +15,13 @@ function But() {
             <div>Долучайся і ти.</div>
           </div>
           <a href="#button_help">
-         <ButtonFunc class="hero-button">Допомогти <img src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
-         </a>
+            <ButtonFunc class="hero-button">
+              Допомогти <img src="/assets/icons/3.svg" alt="arrow" />
+            </ButtonFunc>
+          </a>
         </div>
         <div className="herro-img-block">
-         <SwiperHero/>         
+          <SwiperHero />
         </div>
       </div>
     </div>
