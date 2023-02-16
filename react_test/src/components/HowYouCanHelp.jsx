@@ -7,7 +7,9 @@ function But() {
     <div className="can-help">
       <div className="can-help_wrapper _container">
         <div className="title-block">
-          <h2>Як ви можете допомогти?</h2>
+          <a href="#!" name="button_help">
+            <h2>Як ви можете допомогти?</h2>
+          </a>
           <div>
             Підтримати нас можна кількома способами, ми будемо вдячні за будь-яку допомогу. Це
             зробить нашу роботу кращою та ефективною.
@@ -40,9 +42,16 @@ function But() {
               </ButtonFunc>
             </div>
             <div className="donat-block__fourth-button-block">
-              <ButtonFunc class="donat-button2">
-                Донат за допомогою картки<img src="/assets/icons/help2.svg" alt="button-img"></img>
-              </ButtonFunc>
+              <a
+                href="https://www.paypal.com/donate/?hosted_button_id=2K9ZZ8GQGYMFQ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ButtonFunc class="donat-button2">
+                  Донат за допомогою картки
+                  <img src="/assets/icons/help2.svg" alt="button-img"></img>
+                </ButtonFunc>
+              </a>
             </div>
           </div>
           <div className="img-block">

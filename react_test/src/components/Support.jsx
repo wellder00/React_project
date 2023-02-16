@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 function But() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,19 +13,15 @@ function But() {
   const [emeilError, setEmeilError] = useState('*Це поле є обов’язковим до заповнення');
   const [numberError, setNumberError] = useState('*Це поле є обов’язковим до заповнення');
   const [textError, setTextError] = useState('*Це поле є обов’язковим до заповнення');
-  const[formValid, setFormValid] = useState(false)
+  const [formValid, setFormValid] = useState(false);
 
-  useEffect (() => {
-    if (nameError || emeilError || numberError || textError){
-      setFormValid(false)
+  useEffect(() => {
+    if (nameError || emeilError || numberError || textError) {
+      setFormValid(false);
     } else {
-      setFormValid(true)
+      setFormValid(true);
     }
-  
-   
-  }, [nameError, emeilError, numberError, textError])
-  
-
+  }, [nameError, emeilError, numberError, textError]);
 
   const nameHandler = (e) => {
     setName(e.target.value);
@@ -71,7 +66,9 @@ function But() {
     setText(e.target.value);
     if (e.target.value.length > 500) {
       setTextError('*Ви ввели більше 500 символів');
-    } else {
+    } else if (e.target.value.length === 0) {
+      setTextError('*Це поле є обов’язковим до заповнення');
+    } else if (e.target.value.length > 0 && e.target.value.length < 500) {
       setTextError('');
     }
   };
@@ -90,14 +87,14 @@ function But() {
       case 'text':
         setTextDirty(true);
         break;
-        default:
-          // unknown type! based on the language,
-          // there should probably be some error-handling
-          // here, maybe an exception
+      default:
+      // unknown type! based on the language,
+      // there should probably be some error-handling
+      // here, maybe an exception
     }
   };
 
- console.log(!nameError)
+  console.log(!nameError);
 
   return (
     <div className="support">
@@ -121,7 +118,7 @@ function But() {
                 value={name}
                 onBlur={(e) => blurHandler(e)}
                 name="name"
-                className={nameError && nameDirty ?  'active-error' :  'right-block-name' }
+                className={nameError && nameDirty ? 'active-error' : 'right-block-name'}
                 type="text"
                 placeholder="Ваше ім’я"
                 required
@@ -132,7 +129,7 @@ function But() {
               <input
                 onChange={(e) => emailHandler(e)}
                 value={email}
-                className={emeilError && emailDirty ?  'active-error' :  'right-block-name' }
+                className={emeilError && emailDirty ? 'active-error' : 'right-block-name'}
                 onBlur={(e) => blurHandler(e)}
                 name="email"
                 type="email"
@@ -145,7 +142,7 @@ function But() {
               <input
                 onChange={(e) => numberHandler(e)}
                 value={number}
-                className={numberError && numberDirty ?  'active-error' :  'right-block-name' }
+                className={numberError && numberDirty ? 'active-error' : 'right-block-name'}
                 onBlur={(e) => blurHandler(e)}
                 name="tel"
                 type="tel"
@@ -160,7 +157,9 @@ function But() {
                 onChange={(e) => textHandler(e)}
                 value={text}
                 onBlur={(e) => blurHandler(e)}
-                className={textError && textDirty ?  'right-block-name3__active-error' :  'right-block-name3' }
+                className={
+                  textError && textDirty ? 'right-block-name3__active-error' : 'right-block-name3'
+                }
                 name="text"
                 placeholder="Повідомлення"
                 required
@@ -171,9 +170,16 @@ function But() {
             </div>
             <div className="right-block-checkbox">
               <input type="checkbox" required />
-              <label className={"right-block-check"}>Я погоджуюся з політикою конфіденційності</label>
+              <label className={'right-block-check'}>
+                Я погоджуюся з політикою конфіденційності
+              </label>
             </div>
-            <button disabled = {!formValid} class={formValid ? "support-button" : 'support-button__disabled'}>Відправити форму</button>
+            <button
+              disabled={!formValid}
+              className={formValid ? 'support-button' : 'support-button__disabled'}
+            >
+              Відправити форму
+            </button>
           </form>
         </div>
       </div>

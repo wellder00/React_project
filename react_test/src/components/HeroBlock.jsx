@@ -14,8 +14,9 @@ function But() {
             Тому, ми створили благодійний фонд “A help” і тепер допомогаємо людям.
             <div>Долучайся і ти.</div>
           </div>
+          <a href="#button_help">
          <ButtonFunc class="hero-button">Допомогти <img src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
-         
+         </a>
         </div>
         <div className="herro-img-block">
          <SwiperHero/>         
