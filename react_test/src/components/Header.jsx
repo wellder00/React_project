@@ -95,7 +95,9 @@ const handleOutsiteClick3 = (e) => {
             </li>
           </ul>
         </nav>
+        <a href="#button_help">
         <ButtonFunc class="header-button">Допомогти</ButtonFunc>
+        </a>
       </div>
     </div>
   );

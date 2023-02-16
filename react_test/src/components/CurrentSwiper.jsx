@@ -23,8 +23,8 @@ function CurrentSwiper({index, handleClick}) {
         slidesPerView={1}
       >
         {
-          imgArr.map(img=>
-            <SwiperSlide onClick={() => handleClick(true, index)}>
+          imgArr.map((img, item)=>
+            <SwiperSlide key={`${item}_${img}`} onClick={() => handleClick(true, index)}>
             <div className="current-swiper__card-block">
               <img src={img.src} alt="1" />
             </div>
