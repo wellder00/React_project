@@ -11,6 +11,7 @@ export {default as CurrentSwiper} from "./CurrentSwiper";
 export {default as Footer} from "./Footer";
 export {default as SuccessfulStoriesPopap} from "./SuccessfulStoriesPopap";
 export {default as SuccessfulStoriesPopapSwiper} from "./SuccessfulStoriesPopapSwiper";
+export {default as CurrentNeedsPopap} from "./CurrentNeedsPopap";
 
 
 

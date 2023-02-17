@@ -35,10 +35,10 @@ function Slider() {
         </SwiperSlide>
         <div className="popup-button-block">
           <div className="successful-button-prev-slide">
-            <img src="/assets/icons/arrowLeft.svg" alt="" />
+            <img src="/assets/icons/arrowLeft.svg" alt="1" />
           </div>
           <div className="successful-button-next-slide">
-            <img src="/assets/icons/arrowRight.svg" alt="" />
+            <img src="/assets/icons/arrowRight.svg" alt="1" />
           </div>
         </div>
       </Swiper>
