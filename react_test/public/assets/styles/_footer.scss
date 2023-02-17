@@ -19,19 +19,64 @@
     font-size: 40px;
     line-height: 120%;
   }
+  span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
 }
 
 .footer-right-block {
   margin-top: 72px;
+  div {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #BFBFBF;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
   h2 {
     margin-top: 0;
   }
   p {
     margin-bottom: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
   }
   section {
     display: flex;
-    gap: 20px;
+    gap: 0px;
     margin-top: 30px;
+  }
+}
+
+.footer-socials-icon{
+  width: 48px;
+  height: 48px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  align-content: center;   
+  width: 48px;
+  height: 48px;
+  }
+  a:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 48px;
   }
 }
