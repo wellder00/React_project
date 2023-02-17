@@ -5,6 +5,12 @@
     width: 380px;
     margin-bottom: 48px;
   }
+  h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    
+  }
 }
 
 .card-block-stories-wrapper {
@@ -19,19 +25,18 @@
   }
 }
 
-.button-single-story{
+.button-single-story {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 64px;
 }
 
-.card-block-stories-img{
+.card-block-stories-img {
   width: 392px;
   height: 356px;
-
 }
 
-.card-block-stories{
+.card-block-stories {
   padding: 15px;
   transition: 0.3s;
   &:hover {
@@ -39,7 +44,7 @@
     scale: 1.05;
   }
   &:active {
-    background: #FFE69A;;
+    background: #ffe69a;
     scale: 1.05;
   }
 }

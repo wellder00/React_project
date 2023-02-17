@@ -9,6 +9,7 @@ function CurrentSwiper({index, handleClick}) {
     {src: '/assets/image/cur4.jpg'},
     {src: '/assets/image/cur2.jpg'}
   ];
+  
   return (
     <div className="current-swiper">
       <Swiper
@@ -24,11 +25,12 @@ function CurrentSwiper({index, handleClick}) {
       >
         {
           imgArr.map((img, item)=>
-            <SwiperSlide key={`${item}_${img}`} onClick={() => handleClick(true, index)}>
+            <SwiperSlide key={`${item}_${img}`} onClick={() => handleClick(true, index)}>              
             <div className="current-swiper__card-block">
-              <img src={img.src} alt="1" />
+              <img src={(img.src)} alt="1" />              
             </div>
           </SwiperSlide>
+          
           )
         }
 

@@ -9,7 +9,10 @@ function But() {
         <div className="header-block">
           <div className="header-block__header">Наша допомога у цифрах</div>
         </div>
-        <div className="image-block">
+        <div className="some-stats-img-block">
+          <img src="/assets/image/some-stats.png" alt="some-stats" />
+        </div>
+        {/* <div className="image-block">
           <div className="image-block__line-image">
             <img src="/assets/icons/stats_line.svg" alt="decore-img"></img>
           </div>
@@ -82,7 +85,7 @@ function But() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="button-single-block-card">
            <ButtonFunc class="card-block__singl-button">Всі успішні історії<img className='card-block__singl-button-arrow' src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
         </div>
