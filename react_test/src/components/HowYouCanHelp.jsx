@@ -40,14 +40,14 @@ function But() {
             </div>
             <form>
             <div className="donat-block__first-button-block">
-              <CurrencyButton valueName="first-currency" idName="first-currency" onClickFunction={() => setCurrency("UAH")}></CurrencyButton><label for="first-currency" id="first-currency-label">UAH</label>
-              <CurrencyButton valueName="second-currency" idName="second-currency" onClickFunction={() => setCurrency("USD")}></CurrencyButton><label for="second-currency" id="second-currency-label">USD</label>
-              <CurrencyButton valueName="third-currency" idName="third-currency" onClickFunction={() => setCurrency("EUR")}></CurrencyButton><label for="third-currency" id="third-currency-label">EUR</label>
+              <CurrencyButton valueName="first-currency" idName="first-currency" onClickFunction={() => setCurrency("UAH")}></CurrencyButton><label for="first-currency" id="first-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>UAH</div></label>
+              <CurrencyButton valueName="second-currency" idName="second-currency" onClickFunction={() => setCurrency("USD")}></CurrencyButton><label for="second-currency" id="second-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>USD</div></label>
+              <CurrencyButton valueName="third-currency" idName="third-currency" onClickFunction={() => setCurrency("EUR")}></CurrencyButton><label for="third-currency" id="third-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>EUR</div></label>
             </div>
             <div className="donat-block__second-button-block">
-              <input type="checkbox" name="can-help-button2" value="first-number" id="first-number" /><label for="first-number">{moneyCounts[0]}</label>
-              <input type="checkbox" name="can-help-button2" value="second-number" id="second-number" /><label for="second-number">{moneyCounts[1]}</label>
-              <input type="checkbox" name="can-help-button2" value="third-number" id="third-number" /><label for="third-number">{moneyCounts[2]}</label>
+              <input type="radio" name="can-help-button2" value="first-number" id="first-number" /><label for="first-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[0]}</div></label>
+              <input type="radio" name="can-help-button2" value="second-number" id="second-number" /><label for="second-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[1]}</div></label>
+              <input type="radio" name="can-help-button2" value="third-number" id="third-number" /><label for="third-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[2]}</div></label>
             </div>     
             <input type="number" placeholder="Запропонувати іншу сумму" />
             <div className="donat-block__third-button-block">
