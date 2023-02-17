@@ -87,7 +87,7 @@ function But() {
           </div>
         </div> */}
         <div className="button-single-block-card">
-           <ButtonFunc class="card-block__singl-button">Всі успішні історії<img className='card-block__singl-button-arrow' src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
+           <ButtonFunc class="card-block__some-stats-button">Всі звіти<img className='card-block__singl-button-arrow' src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
         </div>
        </div>       
     </div>

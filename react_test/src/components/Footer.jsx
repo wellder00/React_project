@@ -22,8 +22,8 @@ function Footer(props) {
           <p>Адреса</p>
           <div>м. Харків, вул. Повздовжня, 4</div>
           <section>
-            <div>
-              <a href="#!">
+            <div className="footer-socials-icon">
+              <a href="https://www.facebook.com/A-help-Ukraine-107200221938176/">
                 <svg
                   width="25"
                   height="24"
@@ -58,8 +58,8 @@ function Footer(props) {
                 </svg>
               </a>
             </div>
-            <div>
-              <a href="#!">
+            <div className="footer-socials-icon">
+              <a href="https://www.instagram.com/a_help_ukraine/">
                 <svg
                   width="25"
                   height="24"
@@ -94,8 +94,8 @@ function Footer(props) {
                 </svg>
               </a>
             </div>
-            <div>
-              <a href="#!">
+            <div className="footer-socials-icon">
+              <a href="https://t.me/+iYP6EAe1wKc0MjM6">
                 <svg
                   width="25"
                   height="24"
@@ -110,8 +110,8 @@ function Footer(props) {
                 </svg>
               </a>
             </div>
-            <div>
-              <a href="#!">
+            <div className="footer-socials-icon">
+              <a href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk">
                 <svg
                   width="25"
                   height="24"

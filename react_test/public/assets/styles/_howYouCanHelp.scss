@@ -135,3 +135,177 @@
   display: flex;
   gap: 4%;
 }
+
+.donat-block__first-button-block {
+  display: flex;
+  font-size: 14px;
+  color: #1d192b;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 40px;
+
+  :nth-child(2) {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 100px 0px 0px 100px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+  :nth-child(4) {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+  :last-child {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 0px 100px 100px 0px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+}
+
+input[type="radio"][name="can-help-button"] { display: none; }
+input[type="radio"][name="can-help-button"] + label { 
+  :nth-child(2){
+    all: revert;
+  }
+  :first-child{
+    all: revert;
+    display: none;
+  }
+}
+input[type="radio"][name="can-help-button"]:checked + label {
+  > * {
+    all: revert;
+  } 
+  :first-child{
+    all: revert;
+    display: block;
+    border: 0px;
+    width: 9px;
+    height: 7.5px;
+  }
+  background-color:rgba(31, 30, 27, 0.1); }
+
+input[type="radio"][name="can-help-button2"] { display:none; }
+input[type="radio"][name="can-help-button2"] + label { 
+  :first-child{
+    all: revert;
+    display: none;
+  }
+  :nth-child(2){
+    all: revert;
+  }
+}
+input[type="radio"][name="can-help-button2"]:checked + label {
+  :nth-child(2){
+    all: revert;
+  }
+  :first-child{
+    all: revert;
+    display: block;
+    border: 0px;
+    width: 9px;
+    height: 7.5px;
+  }
+  background-color:rgba(31, 30, 27, 0.1); }
+
+.donat-block__second-button-block {
+  display: flex;
+  font-size: 14px;
+  color: #1d192b;
+  margin-bottom: 24px;
+  width: 310px;
+  height: 48px; 
+
+  :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    width: 104px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 100px 0px 0px 100px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+  :nth-child(4) {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    width: 104px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+  :last-child {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    width: 104px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 0px 100px 100px 0px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(31, 30, 27, 0.1);
+    }
+  }
+}
+
+.donat-button1 {
+  width: 498px;
+  height: 53px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
+  background: #0275ed;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  img {
+    position: relative;
+    top: 5px;
+    padding-left: 10px;
+  }
+  &:hover {
+    background-color: #6FB1F5;
+  }
+}
