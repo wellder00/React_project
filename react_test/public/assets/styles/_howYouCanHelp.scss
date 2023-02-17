@@ -7,6 +7,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  a:active,
+  a:hover,
+  a {
+    text-decoration: none;
+    color: #000000;
+    cursor: auto;
+  }
   h2 {
     @include fluidFontSize(30px, 40px, 480px, 1280px, 35px);
     font-weight: 500;
@@ -55,7 +62,7 @@
     overflow: hidden;
     border: none;
     border-bottom: 2px solid black;
-    margin-bottom: 28px;    
+    margin-bottom: 28px;
   }
   input[type='number']::-webkit-outer-spin-button,
   input[type='number']::-webkit-inner-spin-button {
@@ -106,13 +113,13 @@
   align-self: center;
 }
 
-.table-block{
+.table-block {
   width: 480px;
 }
 
 .can-help__third-block {
   margin-top: 64px;
-  
+
   section {
     text-align: center;
     font-weight: 600;
@@ -127,7 +134,6 @@
 .duble-table-block {
   display: flex;
   gap: 4%;
-  
 }
 
 .donat-block__first-button-block {

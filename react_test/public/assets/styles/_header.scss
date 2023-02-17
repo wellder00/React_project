@@ -3,6 +3,9 @@
   background: $bg-header;
   color: #ffffff;
   padding-top: 18px;
+  position: fixed;
+  width: 100vw;
+  z-index: 100; 
 }
 
 .header-container {

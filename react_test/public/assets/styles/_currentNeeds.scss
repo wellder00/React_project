@@ -40,19 +40,20 @@
   gap: 2%;
 }
 .card-block__wrap-img {
-  position: relative;
-
+  position: relative;  
   width: 286px;
   height: 254px;
 }
 .card-block__content {
+  
   img {
+    // если max-width: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;    
   }
 }
 .button-single-block{
