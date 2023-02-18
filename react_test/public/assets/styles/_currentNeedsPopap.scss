@@ -1,7 +1,28 @@
+.current_myModal__popap{
+  position: relative;
+width: 1240px;
+height: 658px;
+background: #F1F1F1;
+}
+
 .myModal__bg_content_left-block_img {
   position: relative;
   width: 607px;
   height: 570px;
+}
+
+.myModal__popap_close__position{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  z-index: 40;
+  cursor: pointer;
+}
+.myModal__bg_content__wrapper{
+  padding: 60px 20px 44px 44px;
+  display: flex;
+  gap: 40px;
 }
 
 .current-needs-myModal_img { 
@@ -10,7 +31,7 @@
 }
 
 .myModal__bg_content_right-block__scroll {
-  width: 607px;
+  width: 510px;
   height: 570px;
   overflow: auto;
 }

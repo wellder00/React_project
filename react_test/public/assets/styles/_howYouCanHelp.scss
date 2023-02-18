@@ -1,5 +1,6 @@
 .can-help {
   padding-bottom: 108px;
+  position: relative;
 }
 
 .title-block {
@@ -13,8 +14,15 @@
     text-decoration: none;
     color: #000000;
     cursor: auto;
+    border-top: 80px solid transparent;
+    margin-top: -80px;
+    padding: 15px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
   }
   h2 {
+    display: block;
     @include fluidFontSize(30px, 40px, 480px, 1280px, 35px);
     font-weight: 500;
     line-height: 120%;
@@ -190,51 +198,57 @@
   }
 }
 
-input[type="radio"][name="can-help-button"] { display: none; }
-input[type="radio"][name="can-help-button"] + label { 
-  :nth-child(2){
+input[type='radio'][name='can-help-button'] {
+  display: none;
+}
+input[type='radio'][name='can-help-button'] + label {
+  :nth-child(2) {
     all: revert;
   }
-  :first-child{
+  :first-child {
     all: revert;
     display: none;
   }
 }
-input[type="radio"][name="can-help-button"]:checked + label {
+input[type='radio'][name='can-help-button']:checked + label {
   > * {
     all: revert;
-  } 
-  :first-child{
+  }
+  :first-child {
     all: revert;
     display: block;
     border: 0px;
     width: 9px;
     height: 7.5px;
   }
-  background-color:rgba(31, 30, 27, 0.1); }
+  background-color: rgba(31, 30, 27, 0.1);
+}
 
-input[type="radio"][name="can-help-button2"] { display:none; }
-input[type="radio"][name="can-help-button2"] + label { 
-  :first-child{
+input[type='radio'][name='can-help-button2'] {
+  display: none;
+}
+input[type='radio'][name='can-help-button2'] + label {
+  :first-child {
     all: revert;
     display: none;
   }
-  :nth-child(2){
+  :nth-child(2) {
     all: revert;
   }
 }
-input[type="radio"][name="can-help-button2"]:checked + label {
-  :nth-child(2){
+input[type='radio'][name='can-help-button2']:checked + label {
+  :nth-child(2) {
     all: revert;
   }
-  :first-child{
+  :first-child {
     all: revert;
     display: block;
     border: 0px;
     width: 9px;
     height: 7.5px;
   }
-  background-color:rgba(31, 30, 27, 0.1); }
+  background-color: rgba(31, 30, 27, 0.1);
+}
 
 .donat-block__second-button-block {
   display: flex;
@@ -242,7 +256,7 @@ input[type="radio"][name="can-help-button2"]:checked + label {
   color: #1d192b;
   margin-bottom: 24px;
   width: 310px;
-  height: 48px; 
+  height: 48px;
 
   :nth-child(2) {
     display: flex;
@@ -306,6 +320,6 @@ input[type="radio"][name="can-help-button2"]:checked + label {
     padding-left: 10px;
   }
   &:hover {
-    background-color: #6FB1F5;
+    background-color: #6fb1f5;
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ButtonFunc from './ButtonFunc';
 import CurrentNeedsPopap from './CurrentNeedsPopap';
-import { Link } from "react-router-dom";
+
 
 function CurrentNeeds() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -11,6 +11,12 @@ function CurrentNeeds() {
     setModalOpen(state);    
     setSelectedItemIndex(index);
   };
+
+  // скролл вверх при переключении страницы
+  window.scrollTo({
+    top: 0,
+    left: 0
+  });
  
   const stories = [
     {
@@ -49,8 +55,7 @@ function CurrentNeeds() {
   return (
     <div className="currentNeeds">
       <div className="currentNeeds-wrapper _container">
-        <h2>Поточні потреби</h2>
-        <span>Зараз для нас є важливим закриття {'\n'} 4 найважливіших потреб:</span>
+        <h2 className='currentNeeds__page-tetle'>Поточні потреби</h2>
         <div className="card-block">
           {stories.map((item, index) => {
             return (
@@ -65,7 +70,6 @@ function CurrentNeeds() {
                     <div className="card-block__description">{item.description}</div>
                   </div>
                 </div>
-               
                 <a href="#button_help">
                 <ButtonFunc class="card-block__buttons">Допомогти</ButtonFunc>
                 </a>
@@ -75,12 +79,8 @@ function CurrentNeeds() {
         </div>
 
         <div className="button-single-block">
-        <Link to = '/CurrentNeedsPage'>
-          <ButtonFunc class="card-block__singl-button">
-            Всі поточні потреби
-            <img className="card-block__singl-button-arrow" src="/assets/icons/3.svg" alt="arrow" />
-          </ButtonFunc>
-          </Link>
+      
+
           <CurrentNeedsPopap
             selectedItem={stories[selectedItemIndex]}
             isModalOpen={isModalOpen}
