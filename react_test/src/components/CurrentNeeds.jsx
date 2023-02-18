@@ -53,7 +53,7 @@ function CurrentNeeds() {
         <div className="card-block">
           {stories.map((item, index) => {
             return (
-              <div className="card-block__content" key={item.id}>
+              <div className="card-block__content currentNeeds__hover" key={item.id}>
                 <div onClick={() => setModalState(true, index)}>
                   <div className="card-block__wrap-img">
                     <img src={item.src} alt="foto" />
@@ -64,7 +64,9 @@ function CurrentNeeds() {
                     <div className="card-block__description">{item.description}</div>
                   </div>
                 </div>
+                <a href="#button_help">
                 <ButtonFunc class="card-block__buttons">Допомогти</ButtonFunc>
+                </a>
               </div>
             );
           })}

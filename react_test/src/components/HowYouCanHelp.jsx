@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 
 import ButtonFunc from './ButtonFunc';
 
-function CurrencyButton(props){
-  return(
-    <input type="radio" name="can-help-button" value={props.valueName} id={props.idName} onClick={props.onClickFunction}/>
-  )
-};
+function CurrencyButton(props) {
+  return (
+    <input
+      type="radio"
+      name="can-help-button"
+      value={props.valueName}
+      id={props.idName}
+      onClick={props.onClickFunction}
+    />
+  );
+}
 
 const money = {
   UAH: [100, 200, 500],
   USD: [50, 100, 200],
-  EUR: [50, 100, 200]
+  EUR: [50, 100, 200],
 };
 
 function But() {
-  const [currency, setCurrency] = useState("UAH");
+  const [currency, setCurrency] = useState('UAH');
   const moneyCounts = money[currency];
 
   return (
@@ -41,22 +47,86 @@ function But() {
               <div>Ви можете допомогти їм зробивши донат:</div>
             </div>
             <form>
-            <div className="donat-block__first-button-block">
-              <CurrencyButton valueName="first-currency" idName="first-currency" onClickFunction={() => setCurrency("UAH")}></CurrencyButton><label for="first-currency" id="first-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>UAH</div></label>
-              <CurrencyButton valueName="second-currency" idName="second-currency" onClickFunction={() => setCurrency("USD")}></CurrencyButton><label for="second-currency" id="second-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>USD</div></label>
-              <CurrencyButton valueName="third-currency" idName="third-currency" onClickFunction={() => setCurrency("EUR")}></CurrencyButton><label for="third-currency" id="third-currency-label"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>EUR</div></label>
-            </div>
-            <div className="donat-block__second-button-block">
-              <input type="radio" name="can-help-button2" value="first-number" id="first-number" /><label for="first-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[0]}</div></label>
-              <input type="radio" name="can-help-button2" value="second-number" id="second-number" /><label for="second-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[1]}</div></label>
-              <input type="radio" name="can-help-button2" value="third-number" id="third-number" /><label for="third-number"><div className = "currency-button-image"><img src="/assets/icons/button_check.svg" alt="copy_active"></img></div><div>{moneyCounts[2]}</div></label>
-            </div>     
-            <input type="number" placeholder="Запропонувати іншу сумму" />
-            <div className="donat-block__third-button-block">
-              <ButtonFunc class="donat-button1" type="submit">
-                Донат за допомогою картки<img src="/assets/icons/help1.svg" alt="button-img"></img>
-              </ButtonFunc>
-            </div>
+              <div className="donat-block__first-button-block">
+                <CurrencyButton
+                  valueName="first-currency"
+                  idName="first-currency"
+                  onClickFunction={() => setCurrency('UAH')}
+                ></CurrencyButton>
+                <label for="first-currency" id="first-currency-label">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>UAH</div>
+                </label>
+                <CurrencyButton
+                  valueName="second-currency"
+                  idName="second-currency"
+                  onClickFunction={() => setCurrency('USD')}
+                ></CurrencyButton>
+                <label for="second-currency" id="second-currency-label">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>USD</div>
+                </label>
+                <CurrencyButton
+                  valueName="third-currency"
+                  idName="third-currency"
+                  onClickFunction={() => setCurrency('EUR')}
+                ></CurrencyButton>
+                <label for="third-currency" id="third-currency-label">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>EUR</div>
+                </label>
+              </div>
+              <div className="donat-block__second-button-block">
+                <input
+                  type="radio"
+                  name="can-help-button2"
+                  value="first-number"
+                  id="first-number"
+                />
+                <label for="first-number">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>{moneyCounts[0]}</div>
+                </label>
+                <input
+                  type="radio"
+                  name="can-help-button2"
+                  value="second-number"
+                  id="second-number"
+                />
+                <label for="second-number">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>{moneyCounts[1]}</div>
+                </label>
+                <input
+                  type="radio"
+                  name="can-help-button2"
+                  value="third-number"
+                  id="third-number"
+                />
+                <label for="third-number">
+                  <div className="currency-button-image">
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
+                  </div>
+                  <div>{moneyCounts[2]}</div>
+                </label>
+              </div>
+              <input type="number" placeholder="Запропонувати іншу сумму" />
+              <div className="donat-block__third-button-block">
+                <ButtonFunc class="donat-button1" type="submit">
+                  Донат за допомогою картки
+                  <img src="/assets/icons/help1.svg" alt="button-img"></img>
+                </ButtonFunc>
+              </div>
             </form>
             <div className="donat-block__fourth-button-block">
               <a

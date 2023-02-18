@@ -3,6 +3,8 @@
   padding-bottom: 100px;
 }
 
+
+
 .currentNeeds-wrapper {
   h2 {
     @include fluidFontSize(30px, 40px, 480px, 1280px, 35px);
@@ -24,40 +26,53 @@
   .card-block__price {
     font-weight: 700;
     @include fluidFontSize(18px, 24px, 480px, 1280px, 20px);
-    line-height: 29px;    
+    line-height: 29px;
     color: #000000;
     margin-bottom: 12px;
-  } 
-  .card-block__wrap-content{
+  }
+  .card-block__wrap-content {
     height: 320px;
   }
 }
 
 .card-block {
   display: flex;
-
   justify-content: center;
   gap: 2%;
 }
+
 .card-block__wrap-img {
-  position: relative;  
+  position: relative;
   width: 286px;
   height: 254px;
 }
 .card-block__content {
-  
+
   img {
-    // если max-width: 100%;
+    display: block;
+    max-width: 392px;
     width: 100%;
+    max-height: 300px;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;    
   }
 }
-.button-single-block{
-  display: flex; 
-  flex-direction: row-reverse; 
+
+.button-single-block {
+  display: flex;
+  flex-direction: row-reverse;
   margin-top: 64px;
+}
+
+.currentNeeds__hover {
+  padding: 15px;
+  transition: 0.3s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.55);
+    scale: 1.05;;
+  }
+  &:active {
+    background: #ffe69a;
+    scale: 1.05;
+  }
 }
