@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import ButtonFunc from './ButtonFunc';
 import Headerpopup from './HeaderPopup';
@@ -55,12 +56,14 @@ const handleOutsiteClick3 = (e) => {
   return (
     <div className="header">
       <div className="header-container _container">
+      <Link to = '/'>
         <a href="#!" className="logo header__logo">
           <img src="/assets/icons/1.svg" alt="Logo" />
         </a>
+        </Link>
         <nav className="header__nav">
           <ul className="header__menu-list">
-            <li ref={sortRef1}>
+            <li className='header__nav-hover' ref={sortRef1}>
               <a onClick={togglevisiblePopup1} href="#!">
                 Про нас <div className={visiblePopup1 ? 'rotade' : 'header-symbol'}></div>
               </a>
@@ -72,7 +75,7 @@ const handleOutsiteClick3 = (e) => {
               )}
             </li>
 
-            <li ref={sortRef2}>
+            <li className='header__nav-hover' ref={sortRef2}>
               <a onClick={togglevisiblePopup2} href="#!">
                 Проєкти<div className={visiblePopup2 ? 'rotade' : 'header-symbol'}></div>
               </a>
@@ -80,12 +83,12 @@ const handleOutsiteClick3 = (e) => {
                 <Headerpopup className="popup-about-us" items={['Поточні', 'Успішні історії']} />
               )}
             </li>
-            <li>
+            <li className='header__nav-hover'>
               <a href="#!">
-                Контакти<div className="header-symbol"></div>
+                Контакти
               </a>
             </li>
-            <li ref={sortRef3}>
+            <li className='header__nav-hover' ref={sortRef3}>
               <a onClick={togglevisiblePopup3} href="#!">
                 УКР<div className={visiblePopup3 ? 'rotade' : 'header-symbol'}></div>
               </a >

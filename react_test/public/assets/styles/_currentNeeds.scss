@@ -3,8 +3,6 @@
   padding-bottom: 100px;
 }
 
-
-
 .currentNeeds-wrapper {
   h2 {
     @include fluidFontSize(30px, 40px, 480px, 1280px, 35px);
@@ -38,7 +36,7 @@
 .card-block {
   display: flex;
   justify-content: center;
-  gap: 2%;
+  
 }
 
 .card-block__wrap-img {

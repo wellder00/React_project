@@ -12,6 +12,11 @@ export {default as Footer} from "./Footer";
 export {default as SuccessfulStoriesPopap} from "./SuccessfulStoriesPopap";
 export {default as SuccessfulStoriesPopapSwiper} from "./SuccessfulStoriesPopapSwiper";
 export {default as CurrentNeedsPopap} from "./CurrentNeedsPopap";
+export {default as Layout} from "./Layout";
+export {default as LayoutPage} from "./LayoutPage";
+export {default as CurrentNeedsPage} from "./CurrentNeedsPage";
+export {default as SuccessfulStoriesPage} from "./SuccessfulStoriesPage";
+export {default as OurGoal} from "./OurGoal";
 
 
 

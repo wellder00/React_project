@@ -14,7 +14,10 @@
 @import '../public/assets/styles/successfulStoriesPopap';
 @import '../public/assets/styles/successfulStoriesPopapSwiper';
 @import '../public/assets/styles/currentNeedsPopap';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&family=Poppins:wght@400;500;700&family=Volkhov:wght@700&display=swap');
+@import '../public/assets/styles/successfulStoriesPage';
+@import '../public/assets/styles/currentNeedsPage.scss';
+@import '../public/assets/styles/ourGoal.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 body {
   height: 100%;
@@ -31,4 +34,17 @@ body {
   max-width: 1240px;
   margin: 0px auto;
   padding: 0 15px;
+}
+
+.layout-wrapper{
+  margin: 0;  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper-outlet{
+  flex-grow: 1;
+}
+.layout-wrapper__footer{
+  flex-shrink: 0;
 }
