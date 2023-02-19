@@ -94,7 +94,6 @@ function But() {
     }
   };
 
-  console.log(!nameError);
 
   return (
     <div className="support">

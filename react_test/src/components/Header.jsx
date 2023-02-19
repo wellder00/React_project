@@ -60,16 +60,18 @@ function But() {
         <nav className="header__nav">
           <ul className="header__menu-list">
             <li onClick={togglevisiblePopup1} className="header__nav" ref={sortRef1}>
-              <a className="header__nav-hover"  href="#!">
+              <a className="header__nav-hover" href="#!">
                 Про нас <div className={visiblePopup1 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup1 && (
                 <div className="popup-about-us">
                   <ul className="popup-ul">
-                    <Link to="/OurGoal">                 
+                    <Link to="/OurGoal">
                       <li className="popup-li"> Мета та історія </li>
                     </Link>
-                    <li className="popup-li"> Команда та партнери </li>
+                    <Link to="/OurTeams">
+                      <li className="popup-li"> Команда та партнери </li>
+                    </Link>
                     <li className="popup-li"> Документація та звітність </li>
                   </ul>
                 </div>
@@ -77,7 +79,7 @@ function But() {
             </li>
 
             <li onClick={togglevisiblePopup2} className="header__nav" ref={sortRef2}>
-              <a className="header__nav-hover"  href="#!">
+              <a className="header__nav-hover" href="#!">
                 Проєкти<div className={visiblePopup2 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup2 && (
@@ -86,7 +88,7 @@ function But() {
                     <Link to="/CurrentNeedsPage">
                       <li className="popup-li"> Поточні</li>
                     </Link>
-                    <Link to="/SuccessfulStoriesPage">                    
+                    <Link to="/SuccessfulStoriesPage">
                       <li className="popup-li"> Успішні історії </li>
                     </Link>
                   </ul>
@@ -94,12 +96,14 @@ function But() {
               )}
             </li>
             <li className="header__nav">
-              <a className="header__nav-hover" href="#!">
-                Контакти
-              </a>
+              <Link to="/Contacts">
+                <a className="header__nav-hover" href="#!">
+                  Контакти
+                </a>
+              </Link>
             </li>
             <li onClick={togglevisiblePopup3} className="header__nav" ref={sortRef3}>
-              <a className="header__nav-hover"  href="#!">
+              <a className="header__nav-hover" href="#!">
                 УКР<div className={visiblePopup3 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup3 && (
