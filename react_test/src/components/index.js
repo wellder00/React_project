@@ -17,6 +17,8 @@ export {default as LayoutPage} from "./LayoutPage";
 export {default as CurrentNeedsPage} from "./CurrentNeedsPage";
 export {default as SuccessfulStoriesPage} from "./SuccessfulStoriesPage";
 export {default as OurGoal} from "./OurGoal";
+export {default as OurTeams} from "./OurTeams";
+export {default as Contacts} from "./Contacts";
 
 
 

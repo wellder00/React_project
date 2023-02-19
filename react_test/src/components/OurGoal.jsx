@@ -1,4 +1,8 @@
 function OurGoal() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+  });
   return (
     <div className="OurGoal">
       <div className="OurGoal__wrapper _container">
