@@ -1,18 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import ButtonFunc from './ButtonFunc';
-import Headerpopup from './HeaderPopup';
 
 function But() {
   const [visiblePopup1, setvisiblePopup1] = React.useState(false);
   const [visiblePopup2, setvisiblePopup2] = React.useState(false);
   const [visiblePopup3, setvisiblePopup3] = React.useState(false);
-    const sortRef1 = React.useRef();
-    const sortRef2 = React.useRef();
-    const sortRef3 = React.useRef();
+  const sortRef1 = React.useRef();
+  const sortRef2 = React.useRef();
+  const sortRef3 = React.useRef();
 
-  
   const togglevisiblePopup1 = () => {
     setvisiblePopup1(!visiblePopup1);
   };
@@ -24,82 +21,100 @@ function But() {
   };
 
   const handleOutsiteClick1 = (e) => {
-      let path = e.path || (e.composedPath && e.composedPath());
-      if (!path.includes(sortRef1.current)) {
-        setvisiblePopup1(false)
-      }
-  }
+    let path = e.path || (e.composedPath && e.composedPath());
+    if (!path.includes(sortRef1.current)) {
+      setvisiblePopup1(false);
+    }
+  };
   const handleOutsiteClick2 = (e) => {
     let path = e.path || (e.composedPath && e.composedPath());
     if (!path.includes(sortRef2.current)) {
-      setvisiblePopup2(false)
+      setvisiblePopup2(false);
     }
-}
-const handleOutsiteClick3 = (e) => {
-  let path = e.path || (e.composedPath && e.composedPath());
-  if (!path.includes(sortRef3.current)) {
-    setvisiblePopup3(false)
-  }
-}
+  };
+  const handleOutsiteClick3 = (e) => {
+    let path = e.path || (e.composedPath && e.composedPath());
+    if (!path.includes(sortRef3.current)) {
+      setvisiblePopup3(false);
+    }
+  };
 
   React.useEffect(() => {
-   document.body.addEventListener('click', handleOutsiteClick1)
-  }, [])
+    document.body.addEventListener('click', handleOutsiteClick1);
+  }, []);
   React.useEffect(() => {
-    document.body.addEventListener('click', handleOutsiteClick2)
-   }, [])
-   React.useEffect(() => {
-    document.body.addEventListener('click', handleOutsiteClick3)
-   }, [])
-  
+    document.body.addEventListener('click', handleOutsiteClick2);
+  }, []);
+  React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsiteClick3);
+  }, []);
 
   return (
     <div className="header">
       <div className="header-container _container">
-      <Link to = '/'>
-        <a href="#!" className="logo header__logo">
-          <img src="/assets/icons/1.svg" alt="Logo" />
-        </a>
+        <Link to="/">
+          <a href="#!" className="logo header__logo">
+            <img src="/assets/icons/1.svg" alt="Logo" />
+          </a>
         </Link>
         <nav className="header__nav">
           <ul className="header__menu-list">
-            <li className='header__nav-hover' ref={sortRef1}>
-              <a onClick={togglevisiblePopup1} href="#!">
+            <li onClick={togglevisiblePopup1} className="header__nav" ref={sortRef1}>
+              <a className="header__nav-hover"  href="#!">
                 Про нас <div className={visiblePopup1 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup1 && (
-                <Headerpopup
-                  className="popup-about-us"
-                  items={['Мета та історія', 'Команда та партнери', 'Документація та звітність']}
-                />
+                <div className="popup-about-us">
+                  <ul className="popup-ul">
+                    <Link to="/OurGoal">                 
+                      <li className="popup-li"> Мета та історія </li>
+                    </Link>
+                    <li className="popup-li"> Команда та партнери </li>
+                    <li className="popup-li"> Документація та звітність </li>
+                  </ul>
+                </div>
               )}
             </li>
 
-            <li className='header__nav-hover' ref={sortRef2}>
-              <a onClick={togglevisiblePopup2} href="#!">
+            <li onClick={togglevisiblePopup2} className="header__nav" ref={sortRef2}>
+              <a className="header__nav-hover"  href="#!">
                 Проєкти<div className={visiblePopup2 ? 'rotade' : 'header-symbol'}></div>
               </a>
               {visiblePopup2 && (
-                <Headerpopup className="popup-about-us" items={['Поточні', 'Успішні історії']} />
+                <div className="popup-about-us">
+                  <ul className="popup-ul">
+                    <Link to="/CurrentNeedsPage">
+                      <li className="popup-li"> Поточні</li>
+                    </Link>
+                    <Link to="/SuccessfulStoriesPage">                    
+                      <li className="popup-li"> Успішні історії </li>
+                    </Link>
+                  </ul>
+                </div>
               )}
             </li>
-            <li className='header__nav-hover'>
-              <a href="#!">
+            <li className="header__nav">
+              <a className="header__nav-hover" href="#!">
                 Контакти
               </a>
             </li>
-            <li className='header__nav-hover' ref={sortRef3}>
-              <a onClick={togglevisiblePopup3} href="#!">
+            <li onClick={togglevisiblePopup3} className="header__nav" ref={sortRef3}>
+              <a className="header__nav-hover"  href="#!">
                 УКР<div className={visiblePopup3 ? 'rotade' : 'header-symbol'}></div>
-              </a >
+              </a>
               {visiblePopup3 && (
-                <Headerpopup className="popup-about-us" items={['Українська', 'English']} />
+                <div className="popup-about-us">
+                  <ul className="popup-ul">
+                    <li className="popup-li"> Українська</li>
+                    <li className="popup-li"> English </li>
+                  </ul>
+                </div>
               )}
             </li>
           </ul>
         </nav>
         <a href="#button_help">
-        <ButtonFunc class="header-button">Допомогти</ButtonFunc>
+          <ButtonFunc class="header-button">Допомогти</ButtonFunc>
         </a>
       </div>
     </div>

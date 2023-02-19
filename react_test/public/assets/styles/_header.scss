@@ -15,23 +15,35 @@
   justify-content: space-between;
 }
 
+.header__nav{
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;  
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+
+}
+
 .header__nav-hover{
+  display: block;
+  box-sizing: border-box;
   font-size: 16px;
   border: none;
   outline: none;
   color: white;
   padding: 14px 16px;
+  border-radius: 44px;  
   background-color: inherit;
   font-family: inherit; 
   margin: 0; 
-  &:hover {
-    display: block;
+  &:hover {    
     text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.09);
-    border-radius: 44px;  
+    background-color: rgba(255, 255, 255, 0.09);    
+    
   }
 }
-
 
 
 .header__menu-list {
@@ -59,4 +71,36 @@
   content: url(../icons/2.svg);
   margin-left: 13px;
   transform: rotate(180deg);
+}
+.popup-about-us {
+  color: rgb(194, 13, 37);
+  background-color: white;
+  position: absolute;
+  padding: 0;
+  width: auto;
+  z-index: 3;
+  top: 70px;
+  transform: translate(-20%, 0);
+  
+}
+
+.popup-ul {
+  padding: 0;
+}
+
+.popup-li { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: auto;
+  height: 57px;
+  list-style: none;
+  padding: 8px;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.164);
+  padding: 8px 24px 8px 16px;
+  cursor: pointer;
+  &:hover{
+    background-color: rgba(31, 30, 27, 0.1);
+  }
 }
