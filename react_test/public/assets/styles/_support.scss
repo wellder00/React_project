@@ -25,15 +25,24 @@
     .right-block-name {
       width: 496px;
       height: 56px;
-      background: rgba(255, 255, 255, 0.43);
+      background-color: rgba(255, 255, 255, 0.43);
       border-radius: 4px 4px 0px 0px;
       margin-bottom: 24px;
       border: none;
       border-bottom: 1px solid black;
       padding-left: 16px;
-      &:focus {
-        outline: none !important;
+
+      &:hover:not(:focus) {
+        background-color: rgba(31, 30, 27, 0.1);
+        border-bottom: 1px solid rgba(2, 117, 237, 1);
       }
+
+      &:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.43);
+        border-bottom: 2px solid rgba(2, 117, 237, 1);       
+      }
+    
     }
     .active-error {
       width: 496px;
@@ -44,6 +53,16 @@
       border: none;
       border-bottom: 2px solid rgb(238, 2, 2);
       padding-left: 16px;
+      &:hover:not(:focus) {
+        background-color: rgba(31, 30, 27, 0.1);
+        border-bottom: 1px solid rgb(238, 2, 2);
+      }
+
+      &:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.43);
+        border-bottom: 2px solid rgb(238, 2, 2);      
+      }
       &::-webkit-input-placeholder {
         /* WebKit browsers */
         color: #f22b2b;
@@ -60,9 +79,7 @@
         /* Internet Explorer 10+ */
         color: #f22b2b;
       }
-      &:focus {
-        outline: none !important;
-      }
+     
     }
 
     .right-block-name3 {
@@ -75,8 +92,17 @@
       border-bottom: 1px solid black;
       resize: none;
       padding-left: 16px;
+      
+  
+      &:hover:not(:focus) {
+        background-color: rgba(31, 30, 27, 0.1);
+        border-bottom: 1px solid rgba(2, 117, 237, 1);
+      }
+
       &:focus {
-        outline: none !important;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.43);
+        border-bottom: 2px solid rgba(2, 117, 237, 1);       
       }
     }
   }
@@ -91,8 +117,15 @@
   border-bottom: 2px solid rgb(252, 0, 0);
   resize: none;
   padding-left: 16px;
+  &:hover:not(:focus) {
+    background-color: rgba(31, 30, 27, 0.1);
+    border-bottom: 1px solid rgb(238, 2, 2);
+  }
+
   &:focus {
-    outline: none !important;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.43);
+    border-bottom: 2px solid rgb(238, 2, 2);      
   }
   &::-webkit-input-placeholder {
     /* WebKit browsers */
@@ -110,9 +143,7 @@
     /* Internet Explorer 10+ */
     color: #f22b2b;
   }
-  &:focus {
-    outline: none !important;
-  }
+  
 }
 
 .right-block-checkbox {
@@ -131,7 +162,7 @@
   text-decoration-line: underline;
 }
 .right-block__input-content {
-  position: relative;
+  position: relative;  
 }
 .input-error {
   position: absolute;

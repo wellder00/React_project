@@ -49,7 +49,7 @@ function But() {
 
   const numberHandler = (e) => {
     setNumber(e.target.value);
-    const reg = new RegExp('^[0-9]+$');
+    const reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
     if (!reg.test(e.target.value)) {
       setNumberError('*Невірний формат номеру');
     }
