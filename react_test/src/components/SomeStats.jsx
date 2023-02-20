@@ -2,6 +2,7 @@ import React from 'react';
 
 import ButtonFunc from './ButtonFunc';
 
+
 function But() {
   return (
     <div className="some-stats">
@@ -10,7 +11,8 @@ function But() {
           <div className="header-block__header">Наша допомога у цифрах</div>
         </div>
         <div className="some-stats-img-block">
-          <img src="/assets/image/some-stats.png" alt="some-stats" />
+          <img className="some-stats-img-block__large" src="/assets/image/some-stats.png" alt="some-stats" />
+          <img className="some-stats-img-block__small" src="/assets/image/some-stats-mb.svg" alt="some-stats" />
         </div>
         {/* <div className="image-block">
           <div className="image-block__line-image">
