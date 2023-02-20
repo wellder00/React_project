@@ -18,7 +18,7 @@ function Footer(props) {
           <p>Контактний номер</p>
           <div>+380 (96) 052 72 91</div>
           <p>Email</p>
-          <div>3232605@gmail.com</div>
+          <div className="footer-email"><a href = "mailto:3232605@gmail.com">3232605@gmail.com</a></div>
           <p>Адреса</p>
           <div>м. Харків, вул. Повздовжня, 4</div>
           <section>
