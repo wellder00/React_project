@@ -14,6 +14,10 @@ function CurrencyButton(props) {
   );
 }
 
+function ClipboardCopying() {
+
+}
+
 const money = {
   UAH: [100, 200, 500],
   USD: [50, 100, 200],
@@ -147,171 +151,249 @@ function But() {
         </div>
         <div className="can-help__second-block">
           <h3>Банківський платіж за реквізитами</h3>
+          <div className="bank-information-section">
+          <div className="bank-information-block">
           <section>UAH</section>
           <div className="table-block">
             <div className="table-block__name-company">
               <div className="table-block__title">Назва компанії</div>
-              <div className="table-block__name">БФ А-ХЕЛП УКРАЇНА БО</div>
+              <div className="table-block__name">БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
-              <div className="table-block__title">Адреса компанії</div>
+              <div className="table-block__title">IBAN код</div>
               <div className="table-block__name">
-                UA 64703 Харкiвська м Харкiв вулВалентинiвська б.58А кв.333-33
+              UA643515330000026009005902082
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Назва банку</div>
               <div className="table-block__name">
-                JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
+              АТ КБ "ПриватБанк"
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-              </div>
-            </div>
-            <div className="table-block__name-company">
-              <div className="table-block__title">Bank SWIFT Code</div>
-              <div className="table-block__name">PBANUA2X</div>
-              <div className="table-block__image">
-                <img src="/assets/icons/copy_pasive.svg" alt="copy_pasive"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
-              <div className="table-block__title">IBAN</div>
-              <div className="table-block__name">38805429</div>
+              <div className="table-block__title">Адреса банку</div>
+              <div className="table-block__name">Україна, м. Київ, вулиця Грушевського, будинок 1Д</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Код ЄДРПОУ</div>
-              <div className="table-block__name">38805429</div>
+              <div className="table-block__name">44773154</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_pasive.svg" alt="copy_pasive"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
-              <div className="table-block__title">МФО</div>
-              <div className="table-block__name">2392439343</div>
+              <div className="table-block__title">SWIFT код</div>
+              <div className="table-block__name">PBANUA2</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_pasive.svg" alt="copy_pasive"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса компанії</div>
+              <div className="table-block__name">Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
             </div>
             <ButtonFunc class="table-block__button">
-              Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_pasive"></img>
+              Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
             </ButtonFunc>
-          </div>
         </div>
-        <div className="can-help__third-block">
-          <section>EUR</section>
-          <div className="duble-table-block">
-            <div className="table-block">
-              <div className="table-block__name-company">
-                <div className="table-block__title">Company name</div>
-                <div className="table-block__name">БФ А-ХЕЛП УКРАЇНА БО</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
+        </div>
+        <div className="bank-information-block">
+        <section>EUR</section>
+          <div className="table-block">
+            <div className="table-block__name-company">
+              <div className="table-block__title">Назва компанії</div>
+              <div className="table-block__name">CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Адреса компанії</div>
-                <div className="table-block__name">
-                  UA 64703 Харкiвська м Харкiв вулВалентинiвська б.58А кв.333-33
-                </div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
-              </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Correspondent bank</div>
-                <div className="table-block__name">Commerzbank AG, Frankfurt am Main, Germany</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
-              </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Account in the correspondent bank</div>
-                <div className="table-block__name">400886700401</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
-              </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">SWIFT Code of the correspondent bank</div>
-                <div className="table-block__name">COBADEFF</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_pasive"></img>
-                </div>
-              </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">IBAN</div>
-                <div className="table-block__name">UA563209840000026007210322320</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_pasive.svg" alt="copy_pasive"></img>
-                </div>
-              </div>
-              <ButtonFunc class="table-block__button">
-                Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_pasive"></img>
-              </ButtonFunc>
             </div>
-
-            <div className="table-block">
-              <div className="table-block__name-company">
-                <div className="table-block__title">Company name</div>
-                <div className="table-block__name">БФ А-ХЕЛП УКРАЇНА БО</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">IBAN код</div>
+              <div className="table-block__name">
+              UA193515330000026000005903392
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Адреса компанії</div>
-                <div className="table-block__name">
-                  UA 64703 Харкiвська м Харкiв вулВалентинiвська б.58А кв.333-33
-                </div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Correspondent bank</div>
-                <div className="table-block__name">J.P.MORGAN AG, FRANKFURT AM MAIN, GERMANY</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Назва банку</div>
+              <div className="table-block__name">
+              SC CB "PRIVATBANK"
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">Account in the correspondent bank</div>
-                <div className="table-block__name">6231605145</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
-                </div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">SWIFT Code of the correspondent bank</div>
-                <div className="table-block__name">CHASDEFX</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_active.svg" alt="copy_pasive"></img>
-                </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса банку</div>
+              <div className="table-block__name">Ukraine, Kyiv, Hrushevsky Street, building 1D</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
-              <div className="table-block__name-company">
-                <div className="table-block__title">IBAN</div>
-                <div className="table-block__name">UA563209840000026007210322320</div>
-                <div className="table-block__image">
-                  <img src="/assets/icons/copy_pasive.svg" alt="copy_pasive"></img>
-                </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Код ЄДРПОУ</div>
+              <div className="table-block__name">44773154</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
               </div>
-              <ButtonFunc class="table-block__button">
-                Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_pasive"></img>
-              </ButtonFunc>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">SWIFT код</div>
+              <div className="table-block__name">PBANUA2</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса компанії</div>
+              <div className="table-block__name">Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Банк кореспондент</div>
+              <div className="table-block__name">Commerzbank AG</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса банку кореспондента</div>
+              <div className="table-block__name">Frankfurt am Main, Germany</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Рахунок в банку кореспонденті</div>
+              <div className="table-block__name">400886700401</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">SWIFT код банку кореспондента</div>
+              <div className="table-block__name">COBADEFF</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <ButtonFunc class="table-block__button">
+              Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+            </ButtonFunc>
+            </div>
+            </div>
+            <div className="bank-information-block">
+            <section>USD</section>
+          <div className="table-block">
+            <div className="table-block__name-company">
+              <div className="table-block__title">Назва компанії</div>
+              <div className="table-block__name">БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">IBAN код</div>
+              <div className="table-block__name">
+              UA643515330000026009005902082
+              </div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Назва банку</div>
+              <div className="table-block__name">
+              АТ КБ "ПриватБанк"
+              </div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса банку</div>
+              <div className="table-block__name">Україна, м. Київ, вулиця Грушевського, будинок 1Д</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Код ЄДРПОУ</div>
+              <div className="table-block__name">44773154</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">SWIFT код</div>
+              <div className="table-block__name">PBANUA2</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса компанії</div>
+              <div className="table-block__name">Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Банк кореспондент</div>
+              <div className="table-block__name">JP Morgan Chase Bank</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Адреса банку кореспондента</div>
+              <div className="table-block__name">New York ,USA</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">Рахунок в банку кореспонденті</div>
+              <div className="table-block__name">001-1-000080</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <div className="table-block__name-company">
+              <div className="table-block__title">SWIFT код банку кореспондента</div>
+              <div className="table-block__name">CHASUS33</div>
+              <div className="table-block__image">
+                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+              </div>
+            </div>
+            <ButtonFunc class="table-block__button">
+              Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+            </ButtonFunc>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
