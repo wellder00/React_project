@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 function Contacts() {
 
-  window.scrollTo({
-    top: 0,
-    left: 0
-  });
 
   
   const [name, setName] = useState('');

@@ -31,6 +31,17 @@
       border: none;
       border-bottom: 1px solid black;
       padding-left: 16px;
+      &:hover {
+        background: rgba(31, 30, 27, 0.1);
+        border-bottom: 1px solid rgba(2, 117, 237, 1);
+      }
+      &:active not:hover {
+        background: rgba(255, 255, 255, 0.43);
+        border-bottom: 2px solid rgba(2, 117, 237, 1);
+        
+      }
+     
+   
       &:focus {
         outline: none !important;
       }
@@ -44,6 +55,9 @@
       border: none;
       border-bottom: 2px solid rgb(238, 2, 2);
       padding-left: 16px;
+      &:hover {
+        background: rgba(31, 30, 27, 0.1);
+      }
       &::-webkit-input-placeholder {
         /* WebKit browsers */
         color: #f22b2b;
@@ -75,8 +89,17 @@
       border-bottom: 1px solid black;
       resize: none;
       padding-left: 16px;
+      
       &:focus {
         outline: none !important;
+      }
+      &:hover {
+        background: rgba(31, 30, 27, 0.1);
+        border-bottom: 1px solid rgba(2, 117, 237, 1);
+      }
+      &:active {
+        background: rgba(255, 255, 255, 0.43);
+        border-bottom: 2px solid rgba(2, 117, 237, 1);
       }
     }
   }
@@ -91,6 +114,9 @@
   border-bottom: 2px solid rgb(252, 0, 0);
   resize: none;
   padding-left: 16px;
+  &:hover {
+    background: rgba(31, 30, 27, 0.1);
+  }
   &:focus {
     outline: none !important;
   }
@@ -131,7 +157,7 @@
   text-decoration-line: underline;
 }
 .right-block__input-content {
-  position: relative;
+  position: relative;  
 }
 .input-error {
   position: absolute;
