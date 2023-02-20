@@ -242,8 +242,8 @@ function Contacts() {
             </div>
           </div>
           <div className="first-contacts-block__right_description">
-            <img src="/assets/image/map.jpg" alt="map" />
-          </div>
+          <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.977115062345!2d36.288341800000005!3d50.04926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a6fdc42942d3%3A0x461820e85ec748e9!2z0J_RgNC-0LTQvtC70YzQvdCw0Y8g0YPQuy4sIDQsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgNjEwMDA!5e0!3m2!1sru!2sjo!4v1676920292014!5m2!1sru!2sjo" width="800" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         </div>
         <div className="second-contacts-block">
           <div className="second-contacts-block__left-block">
