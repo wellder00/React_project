@@ -14,8 +14,19 @@ function CurrencyButton(props) {
   );
 }
 
-function ClipboardCopying() {
+const clipboard = {
+  1: "БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””",
+  2: "UA643515330000026009005902082",
+  3: "АТ КБ \"ПриватБанк\"",
+  4: "Україна, м. Київ, вулиця Грушевського, будинок 1Д",
+  5: "44773154",
+  6: "PBANUA2",
+  7: "Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33"
+}
 
+function ClipboardCopying(number) {
+    navigator.clipboard.writeText(clipboard[number]);
+    return 1;
 }
 
 const money = {
@@ -159,7 +170,7 @@ function But() {
               <div className="table-block__title">Назва компанії</div>
               <div className="table-block__name">БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(1)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -168,7 +179,7 @@ function But() {
               UA643515330000026009005902082
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(2)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -177,35 +188,35 @@ function But() {
               АТ КБ "ПриватБанк"
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(3)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса банку</div>
               <div className="table-block__name">Україна, м. Київ, вулиця Грушевського, будинок 1Д</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(4)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Код ЄДРПОУ</div>
               <div className="table-block__name">44773154</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(5)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">SWIFT код</div>
               <div className="table-block__name">PBANUA2</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(6)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса компанії</div>
               <div className="table-block__name">Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(7)} alt="copy_active"></img>
               </div>
             </div>
             <ButtonFunc class="table-block__button">
@@ -220,7 +231,7 @@ function But() {
               <div className="table-block__title">Назва компанії</div>
               <div className="table-block__name">CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(8)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -229,7 +240,7 @@ function But() {
               UA193515330000026000005903392
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(9)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -238,63 +249,63 @@ function But() {
               SC CB "PRIVATBANK"
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(10)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса банку</div>
               <div className="table-block__name">Ukraine, Kyiv, Hrushevsky Street, building 1D</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(11)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Код ЄДРПОУ</div>
               <div className="table-block__name">44773154</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(12)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">SWIFT код</div>
               <div className="table-block__name">PBANUA2</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(13)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса компанії</div>
               <div className="table-block__name">Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(14)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Банк кореспондент</div>
               <div className="table-block__name">Commerzbank AG</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(15)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса банку кореспондента</div>
               <div className="table-block__name">Frankfurt am Main, Germany</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(16)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Рахунок в банку кореспонденті</div>
               <div className="table-block__name">400886700401</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(17)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">SWIFT код банку кореспондента</div>
               <div className="table-block__name">COBADEFF</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(18)} alt="copy_active"></img>
               </div>
             </div>
             <ButtonFunc class="table-block__button">
@@ -309,7 +320,7 @@ function But() {
               <div className="table-block__title">Назва компанії</div>
               <div className="table-block__name">БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(19)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -318,7 +329,7 @@ function But() {
               UA643515330000026009005902082
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(20)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
@@ -327,63 +338,63 @@ function But() {
               АТ КБ "ПриватБанк"
               </div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(21)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса банку</div>
               <div className="table-block__name">Україна, м. Київ, вулиця Грушевського, будинок 1Д</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(22)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Код ЄДРПОУ</div>
               <div className="table-block__name">44773154</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(23)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">SWIFT код</div>
               <div className="table-block__name">PBANUA2</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(24)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса компанії</div>
               <div className="table-block__name">Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(25)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Банк кореспондент</div>
               <div className="table-block__name">JP Morgan Chase Bank</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(26)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Адреса банку кореспондента</div>
               <div className="table-block__name">New York ,USA</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(27)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">Рахунок в банку кореспонденті</div>
               <div className="table-block__name">001-1-000080</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(28)} alt="copy_active"></img>
               </div>
             </div>
             <div className="table-block__name-company">
               <div className="table-block__title">SWIFT код банку кореспондента</div>
               <div className="table-block__name">CHASUS33</div>
               <div className="table-block__image">
-                <img src="/assets/icons/copy_active.svg" onClick={ClipboardCopying()} alt="copy_active"></img>
+                <img src="/assets/icons/copy_active.svg" onClick={() => ClipboardCopying(29)} alt="copy_active"></img>
               </div>
             </div>
             <ButtonFunc class="table-block__button">
