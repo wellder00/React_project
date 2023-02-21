@@ -32,7 +32,7 @@ function OurTeams() {
               </strong>
             </span>
             <br />
-            <span>Cпівзасновник, керівник фонду</span>
+            <span className='ourTeams__people-block-light'>Cпівзасновник, керівник фонду</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -44,7 +44,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Cпівзасновник, менеджер проектів</span>
+            <span className='ourTeams__people-block-light'>Cпівзасновник, менеджер проектів</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -56,7 +56,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Волонтер</span>
+            <span className='ourTeams__people-block-light'>Волонтер</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -68,7 +68,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Волонтер</span>
+            <span className='ourTeams__people-block-light'>Волонтер</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -80,7 +80,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Водій-волонтер</span>
+            <span className='ourTeams__people-block-light'>Водій-волонтер</span>
           </div>
         </div>
         <h2 className="ourTeams__title-pertners">Наша команда</h2>
