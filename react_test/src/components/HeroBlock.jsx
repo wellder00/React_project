@@ -1,7 +1,22 @@
 import React from 'react';
-
 import ButtonFunc from './ButtonFunc';
-import SwiperHero from './SwiperHero';
+import Slider from './Slider';
+import one from '../assets/one.jpg';
+import two from '../assets/two.jpg';
+import three from '../assets/three.jpg';
+
+const imgArr = [
+  {
+    src: one
+  },
+  {
+    src: two
+  },
+  {
+    src: three
+  }
+];
+
 
 function But() {
   return (
@@ -21,7 +36,7 @@ function But() {
           </a>
         </div>
         <div className="herro-img-block">
-          <SwiperHero />
+          <Slider imgArr={imgArr}/>
         </div>
       </div>
     </div>
