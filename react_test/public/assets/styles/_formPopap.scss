@@ -1,0 +1,19 @@
+.form-popap {
+  width: 60vw;
+  height: 60vh;
+  background: #F1F1F1;
+  position: relative;
+  padding: 1% 0%;
+}
+
+
+
+.privacy-policy__wrapper {
+  overflow-y: scroll;
+  height: 55vh;
+  padding: 2% 5%;
+  text-align: center;
+  section{
+    text-align: start;
+  }
+}

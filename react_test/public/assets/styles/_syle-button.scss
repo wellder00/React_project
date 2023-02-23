@@ -148,3 +148,15 @@
     background-color: #FFE9A8;
   }
 }
+
+.current-need-popap-botton {
+  margin-top: 40px;
+  background: #ffd966;
+  width: 60%;
+  border: 0;
+  height: 48px;  
+  cursor: pointer;
+  &:hover{
+    background-color: #FFE9A8;
+  }
+}

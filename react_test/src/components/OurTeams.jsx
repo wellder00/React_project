@@ -32,7 +32,7 @@ function OurTeams() {
               </strong>
             </span>
             <br />
-            <span>Cпівзасновник, керівник фонду</span>
+            <span className='ourTeams__people-block-light'>Cпівзасновник, керівник фонду</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -44,7 +44,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Cпівзасновник, менеджер проектів</span>
+            <span className='ourTeams__people-block-light'>Cпівзасновник, менеджер проектів</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -56,7 +56,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Волонтер</span>
+            <span className='ourTeams__people-block-light'>Волонтер</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -68,7 +68,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Волонтер</span>
+            <span className='ourTeams__people-block-light'>Волонтер</span>
           </div>
           <div className="ourTeams__people-block">
             <div className="ourTeams__people-block__img">
@@ -80,7 +80,7 @@ function OurTeams() {
               </strong>
             </span>{' '}
             <br />
-            <span>Водій-волонтер</span>
+            <span className='ourTeams__people-block-light'>Водій-волонтер</span>
           </div>
         </div>
         <h2 className="ourTeams__title-pertners">Наша команда</h2>
@@ -91,56 +91,56 @@ function OurTeams() {
               <img src="/assets/image/partners1.png" alt="World Food Programme" />
             </div>
             <span>World Food Programme</span>
-            <span>Гумінатарна організація</span>
+            <span className='ourTeams__partners-block__light'>Гумінатарна організація</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners2.png" alt="Голоси дітей" />
             </div>
             <span>Голоси дітей</span>
-            <span>Благодійний фонд</span>
+            <span className='ourTeams__partners-block__light'>Благодійний фонд</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners3.png" alt="Сила берегині" />
             </div>
             <span>Сила берегині</span>
-            <span>Громадська організація</span>
+            <span className='ourTeams__partners-block__light'>Громадська організація</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners4.png" alt="World Central Kitchen" />
             </div>
             <span>World Central Kitchen</span>
-            <span>Благодійна організація</span>
+            <span className='ourTeams__partners-block__light'>Благодійна організація</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners5.png" alt="Інфочат Харків" />
             </div>
             <span>Інфочат Харків</span>
-            <span>Громадська організація</span>
+            <span className='ourTeams__partners-block__light'>Громадська організація</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners6.png" alt="Роман Грибков" />
             </div>
             <span>Good bread</span>
-            <span>Соціальна пекарня</span>
+            <span className='ourTeams__partners-block__light'>Соціальна пекарня</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners7.png" alt="Япошка" />
             </div>
             <span>Япошка</span>
-            <span>Мережа ресторанів японської та італійської кухні</span>
+            <span className='ourTeams__partners-block__light'>Мережа ресторанів японської та італійської кухні</span>
           </div>
           <div className="ourTeams__partners-block">
             <div className="ourTeams__partners-block__img">
               <img src="/assets/image/partners8.png" alt="GLOBAL 2000" />
             </div>
             <span>GLOBAL 2000</span>
-            <span>Організація з охорони навколишнього середовища</span>
+            <span className='ourTeams__partners-block__light'>Організація з охорони навколишнього середовища</span>
           </div>
         </div>
       </div>

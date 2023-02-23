@@ -1,5 +1,4 @@
 import { Dialog } from '@headlessui/react';
-import ButtonFunc from './ButtonFunc';
 
 export default function MyModal({ isModalOpen, setModalState, selectedItem }) {
   return (
@@ -50,10 +49,7 @@ export default function MyModal({ isModalOpen, setModalState, selectedItem }) {
                     <section className="myModal__bg_content_right-block__sum">
                       {selectedItem.sum}
                     </section>
-                    <div>{selectedItem.longDesc}</div>
-                    <a href="#button_help">
-                      <ButtonFunc onClick={() => setModalState(false, 0)} class="current-need-popap-botton">Допомогти</ButtonFunc>
-                    </a>
+                    <div>{selectedItem.longDesc}</div>                    
                   </div>
                 </div>
               </div>
