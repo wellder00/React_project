@@ -9,6 +9,28 @@
   }
 }
 
+.donat-button1 {
+  display: flex;
+  width: 498px;
+  height: 53px;
+  margin-bottom: 28px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background: #0275ed;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  img {
+    position: relative;
+    top: 5px;
+    padding-left: 10px;
+  }
+  &:hover {
+    background-color: #6fb1f5;
+  }
+}
+
 .hero-button {
   background: #ffd966;
   width: 100%;
