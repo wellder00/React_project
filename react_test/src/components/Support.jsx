@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import FormPopap from './FormPopap';
 
 function But() {
+  const [isModalOpen, setModalOpen] = useState(false);
+    const setModalState = (state) => {    
+    setModalOpen(state);   
+  };
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
@@ -169,7 +175,7 @@ function But() {
             </div>
             <div className="right-block-checkbox">
               <input type="checkbox" required />
-              <label className={'right-block-check'}>
+              <label onClick={() => setModalState(true)} className={'right-block-check'}>
                 Я погоджуюся з політикою конфіденційності
               </label>
             </div>
@@ -182,6 +188,10 @@ function But() {
           </form>
         </div>
       </div>
+      <FormPopap           
+            isModalOpen={isModalOpen}
+            setModalState={setModalState}
+          />
     </div>
   );
 }

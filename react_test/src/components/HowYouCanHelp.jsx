@@ -57,7 +57,7 @@ function But() {
                   idName="first-currency"
                   onClickFunction={() => setCurrency('UAH')}
                 ></CurrencyButton>
-                <label for="first-currency" id="first-currency-label">
+                <label htmlFor="first-currency" id="first-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -68,7 +68,7 @@ function But() {
                   idName="second-currency"
                   onClickFunction={() => setCurrency('USD')}
                 ></CurrencyButton>
-                <label for="second-currency" id="second-currency-label">
+                <label htmlFor="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -79,7 +79,7 @@ function But() {
                   idName="third-currency"
                   onClickFunction={() => setCurrency('EUR')}
                 ></CurrencyButton>
-                <label for="third-currency" id="third-currency-label">
+                <label htmlFor="third-currency" id="third-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -93,7 +93,7 @@ function But() {
                   value="first-number"
                   id="first-number"
                 />
-                <label for="first-number">
+                <label htmlFor="first-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -105,7 +105,7 @@ function But() {
                   value="second-number"
                   id="second-number"
                 />
-                <label for="second-number">
+                <label htmlFor="second-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -117,7 +117,7 @@ function But() {
                   value="third-number"
                   id="third-number"
                 />
-                <label for="third-number">
+                <label htmlFor="third-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>

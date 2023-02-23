@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import ButtonFunc from './ButtonFunc';
+
 
 
 function But() {
@@ -89,7 +90,9 @@ function But() {
           </div>
         </div> */}
         <div className="button-single-block-card">
+            <Link to="/DocumentPage">
            <ButtonFunc class="card-block__some-stats-button">Всі звіти<img className='card-block__singl-button-arrow' src="/assets/icons/3.svg" alt="arrow" /></ButtonFunc>
+             </Link>
         </div>
        </div>       
     </div>
