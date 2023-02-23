@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ButtonFunc from './ButtonFunc';
 
@@ -58,6 +58,28 @@ const money = {
 function But() {
   const [pageState, setPageState] = useState(['UAH', false, false, false]);
   const [timerId, setTimerId] = useState(null);
+  const [number, setNumber] = useState('');
+  const [choice, setChoice] = useState('');
+  const [currencyChoice, setCurrencyChoice] = useState('');
+  const [numberError, setNumberError] = useState('*Це поле є обов’язковим до заповнення');
+
+  const [formValid, setFormValid] = useState(false);
+
+  useEffect(() => {
+    if ((numberError && (choice === "")) || (currencyChoice === "")) {
+      setFormValid(false);
+    } else {
+      setFormValid(true);
+    }
+  }, [numberError, choice, currencyChoice]);
+
+  const numberHandler = (e) => {
+    setNumber(e.target.value);
+    if (e.target.value.length === 0) {
+      setNumberError('*Це поле є обов’язковим до заповнення');
+    }
+  };
+
   const moneyCounts = money[pageState[0]];
 
   function clipboardCopying(number) {
@@ -119,10 +141,11 @@ function But() {
                   valueName="first-currency"
                   idName="first-currency"
                   onClickFunction={() => setCurrency('UAH')}
+                  checked={currencyChoice === 'first-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
                 <label for="first-currency" id="first-currency-label">
                   <div className="currency-button-image">
-                    <img src="/assets/icons/.svg" alt="copy_active"></img>
+                    <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
                   <div>UAH</div>
                 </label>
@@ -130,6 +153,7 @@ function But() {
                   valueName="second-currency"
                   idName="second-currency"
                   onClickFunction={() => setCurrency('USD')}
+                  checked={currencyChoice === 'second-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
                 <label for="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
@@ -141,6 +165,7 @@ function But() {
                   valueName="third-currency"
                   idName="third-currency"
                   onClickFunction={() => setCurrency('EUR')}
+                  checked={currencyChoice === 'third-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
                 <label for="third-currency" id="third-currency-label">
                   <div className="currency-button-image">
@@ -155,6 +180,7 @@ function But() {
                   name="can-help-button2"
                   value="first-number"
                   id="first-number"
+                  checked={choice === 'first-number'} onChange={(e) => setChoice(e.target.value)}
                 />
                 <label for="first-number">
                   <div className="currency-button-image">
@@ -167,6 +193,7 @@ function But() {
                   name="can-help-button2"
                   value="second-number"
                   id="second-number"
+                  checked={choice === 'second-number'} onChange={(e) => setChoice(e.target.value)}
                 />
                 <label for="second-number">
                   <div className="currency-button-image">
@@ -179,6 +206,7 @@ function But() {
                   name="can-help-button2"
                   value="third-number"
                   id="third-number"
+                  checked={choice === 'third-number'} onChange={(e) => setChoice(e.target.value)}
                 />
                 <label for="third-number">
                   <div className="currency-button-image">
@@ -187,9 +215,12 @@ function But() {
                   <div>{moneyCounts[2]}</div>
                 </label>
               </div>
-              <input type="number" placeholder="Запропонувати іншу сумму" />
+              <input type="number" className={numberError ? 'active-error' : 'right-block-name'} placeholder="Запропонувати іншу сумму"  onChange={(e) => numberHandler(e)}
+                value={number}
+                name="number"/>
+              {numberError && <div className="input-error">{numberError}</div>}
               <div className="donat-block__third-button-block">
-                <ButtonFunc class="donat-button1" type="submit">
+                <ButtonFunc class="donat-button1" type="submit" disabled={!formValid}>
                   Донат за допомогою картки
                   <img src="/assets/icons/help1.svg" alt="button-img"></img>
                 </ButtonFunc>

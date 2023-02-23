@@ -65,3 +65,24 @@ iframe {
     line-height: 120%;
   }
 }
+
+.footer-socials-icon{
+  width: 48px;
+  height: 48px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  align-content: center;   
+  width: 48px;
+  height: 48px;
+  }
+  a:hover {
+    background: rgba(31, 30, 27, 0.1);
+    border-radius: 48px;
+  }
+}
