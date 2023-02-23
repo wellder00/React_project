@@ -80,3 +80,8 @@
     border-radius: 48px;
   }
 }
+
+.footer-email a:link, a:visited {
+  color: inherit;
+  text-decoration: underline;
+}
