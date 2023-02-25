@@ -103,7 +103,7 @@ function But() {
 
   function clipboardCopying(number) {
     navigator.clipboard.writeText(clipboard[number]);
-   if (number > 32){
+   if (number > 29){
       togglePopup(number);
    }
   }
