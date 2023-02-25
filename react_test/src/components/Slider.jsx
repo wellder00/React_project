@@ -48,7 +48,7 @@ const Slider = ({imgArr}) => {
                         key={index}
                         className = {clsx('slider-item', index === currentIndex ? 'active' : 'default')}
                     >
-                        <img src={item.src}/>
+                        <img src={item.src} alt = 'some img'/>
                     </div>
                 )}
             </div>

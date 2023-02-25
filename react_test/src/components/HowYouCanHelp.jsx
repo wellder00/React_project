@@ -162,7 +162,7 @@ function But() {
                   onClickFunction={() => {setCurrency('UAH'); handleOption1Change("1")}}
                   checked = {option1 === "1"}
                 ></CurrencyButton>
-                <label for="first-currency" id="first-currency-label">
+                <label htmlFor="first-currency" id="first-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -174,7 +174,7 @@ function But() {
                   onClickFunction={() => {setCurrency('USD'); handleOption1Change("2")}}
                   onBlur=""
                 ></CurrencyButton>
-                <label for="second-currency" id="second-currency-label">
+                <label htmlFor="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -185,7 +185,7 @@ function But() {
                   idName="third-currency"
                   onClickFunction={() => {setCurrency('EUR'); handleOption1Change("3")}}
                 ></CurrencyButton>
-                <label for="third-currency" id="third-currency-label">
+                <label htmlFor="third-currency" id="third-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -200,7 +200,7 @@ function But() {
                   id="first-number"
                   onChange={() => handleOption2Change("1")}
                 />
-                <label for="first-number">
+                <label htmlFor="first-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -214,7 +214,7 @@ function But() {
                   onChange={() => handleOption2Change("2")}
                   onBlur=""
                 />
-                <label for="second-number">
+                <label htmlFor="second-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -228,7 +228,7 @@ function But() {
                   onChange={() => handleOption2Change("3")}
                   onBlur=""
                 />
-                <label for="third-number">
+                <label htmlFor="third-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>

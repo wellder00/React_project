@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 function Contacts() {
-
-
-  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
@@ -33,7 +30,6 @@ function Contacts() {
     }
   };
 
- 
   const emailHandler = (e) => {
     setEmail(e.target.value);
     let result =
@@ -67,7 +63,7 @@ function Contacts() {
         break;
       case 'email':
         setEmailDirty(true);
-        break;     
+        break;
       case 'text':
         setTextDirty(true);
         break;
@@ -238,8 +234,16 @@ function Contacts() {
             </div>
           </div>
           <div className="first-contacts-block__right_description">
-          <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.977115062345!2d36.288341800000005!3d50.04926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a6fdc42942d3%3A0x461820e85ec748e9!2z0J_RgNC-0LTQvtC70YzQvdCw0Y8g0YPQuy4sIDQsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgNjEwMDA!5e0!3m2!1sru!2sjo!4v1676920292014!5m2!1sru!2sjo" width="800" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <iframe
+              title="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.977115062345!2d36.288341800000005!3d50.04926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a6fdc42942d3%3A0x461820e85ec748e9!2z0J_RgNC-0LTQvtC70YzQvdCw0Y8g0YPQuy4sIDQsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgNjEwMDA!5e0!3m2!1sru!2sjo!4v1676920292014!5m2!1sru!2sjo"
+              width="800"
+              height="600"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
         <div className="second-contacts-block">
           <div className="second-contacts-block__left-block">
@@ -250,64 +254,64 @@ function Contacts() {
             </section>
           </div>
           <div className="right-block">
-          <form>
-            <div className="right-block__input-content">
-              <input
-                onChange={(e) => nameHandler(e)}
-                value={name}
-                onBlur={(e) => blurHandler(e)}
-                name="name"
-                className={nameError && nameDirty ? 'active-error' : 'right-block-name'}
-                type="text"
-                placeholder="Ваше ім’я"
-                required
-              />
-              {nameError && nameDirty && <div className="input-error">{nameError}</div>}
-            </div>
-            <div className="right-block__input-content">
-              <input
-                onChange={(e) => emailHandler(e)}
-                value={email}
-                className={emeilError && emailDirty ? 'active-error' : 'right-block-name'}
-                onBlur={(e) => blurHandler(e)}
-                name="email"
-                type="email"
-                placeholder="Email"
-                required
-              />
-              {emeilError && emailDirty && <div className="input-error">{emeilError}</div>}
-            </div>
-         
-            <div className="right-block__input-content">
-              <textarea
-                onChange={(e) => textHandler(e)}
-                value={text}
-                onBlur={(e) => blurHandler(e)}
-                className={
-                  textError && textDirty ? 'right-block-name3__active-error' : 'right-block-name3'
-                }
-                name="text"
-                placeholder="Повідомлення"
-                required
-              ></textarea>
+            <form>
               <div className="right-block__input-content">
-                {textError && textDirty && <div className="input-error-currency">{textError}</div>}
+                <input
+                  onChange={(e) => nameHandler(e)}
+                  value={name}
+                  onBlur={(e) => blurHandler(e)}
+                  name="name"
+                  className={nameError && nameDirty ? 'active-error' : 'right-block-name'}
+                  type="text"
+                  placeholder="Ваше ім’я"
+                  required
+                />
+                {nameError && nameDirty && <div className="input-error">{nameError}</div>}
               </div>
-            </div>
-            <div className="right-block-checkbox">
-              <input type="checkbox" required />
-              <label className={'right-block-check'}>
-                Я погоджуюся з політикою конфіденційності
-              </label>
-            </div>
-            <button
-              disabled={!formValid}
-              className={formValid ? 'support-button' : 'support-button__disabled'}
-            >
-              Відправити форму
-            </button>
-          </form>
-        </div>
+              <div className="right-block__input-content">
+                <input
+                  onChange={(e) => emailHandler(e)}
+                  value={email}
+                  className={emeilError && emailDirty ? 'active-error' : 'right-block-name'}
+                  onBlur={(e) => blurHandler(e)}
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                {emeilError && emailDirty && <div className="input-error">{emeilError}</div>}
+              </div>
+
+              <div className="right-block__input-content">
+                <textarea
+                  onChange={(e) => textHandler(e)}
+                  value={text}
+                  onBlur={(e) => blurHandler(e)}
+                  className={
+                    textError && textDirty ? 'right-block-name3__active-error' : 'right-block-name3'
+                  }
+                  name="text"
+                  placeholder="Повідомлення"
+                  required
+                ></textarea>
+                <div className="right-block__input-content">
+                  {textError && textDirty && <div className="input-error">{textError}</div>}
+                </div>
+              </div>
+              <div className="right-block-checkbox">
+                <input type="checkbox" required />
+                <label className={'right-block-check'}>
+                  Я погоджуюся з політикою конфіденційності
+                </label>
+              </div>
+              <button
+                disabled={!formValid}
+                className={formValid ? 'support-button' : 'support-button__disabled'}
+              >
+                Відправити форму
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
