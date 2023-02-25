@@ -10,9 +10,14 @@ function CurrencyButton(props) {
       value={props.valueName}
       id={props.idName}
       onClick={props.onClickFunction}
+      checked={props.checked}
     />
   );
 }
+
+function submitFunction(){
+  console.log("Fine");
+};
 
 const clipboard = {
   1: "БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””",
@@ -25,29 +30,31 @@ const clipboard = {
   8: "CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””",
   9: "UA193515330000026000005903392",
   10: "SC CB \"PRIVATBANK\"",
-  11: "",
-  12: "",
-  13: "",
-  14: "",
-  15: "",
-  16: "",
-  17: "",
-  18: "",
-  19: "",
-  20: "",
-  21: "",
-  22: "",
-  23: "",
-  24: "",
-  25: "",
-  26: "",
-  27: "",
-  28: "",
-  29: "",
-  30: "HELLO",
-  31: "",
-  32: "",
+  11: "Ukraine, Kyiv, Hrushevsky Street, building 1D",
+  12: "44773154",
+  13: "PBANUA2",
+  14: "Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33",
+  15: "Commerzbank AG",
+  16: "Frankfurt am Main, Germany",
+  17: "400886700401",
+  18: "COBADEFF",
+  19: "CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””",
+  20: "UA433515330000026001035904638",
+  21: "SC CB \"PRIVATBANK\"",
+  22: "Ukraine, Kyiv, Hrushevsky Street, building 1D",
+  23: "44773154",
+  24: "PBANUA2",
+  25: "Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33",
+  26: "JP Morgan Chase Bank",
+  27: "New York ,USA",
+  28: "001-1-000080",
+  29: "CHASUS33",
+  30: "Назва компанії: БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””; IBAN код: UA643515330000026009005902082; Назва банку: АТ КБ \"ПриватБанк\", Адреса банку: Україна, м. Київ, вулиця Грушевського, будинок 1Д; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33",
+  31: "Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA193515330000026000005903392; Назва банку: SC CB \"PRIVATBANK\"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: Commerzbank AG; Адреса банку кореспондента: Frankfurt am Main, Germany; Рахунок в банку кореспонденті: 400886700401; SWIFT код банку кореспондента: COBADEFF",
+  32: "Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA433515330000026001035904638; Назва банку: SC CB \"PRIVATBANK\"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: JP Morgan Chase Bank; Адреса банку кореспондента: New York, USA; Рахунок в банку кореспонденті: 001-1-000080; SWIFT код банку кореспондента: CHASUS33"
 }
+
+
 
 const money = {
   UAH: [100, 200, 500],
@@ -56,27 +63,39 @@ const money = {
 };
 
 function But() {
+  
+  const [formChange, setFormChanged] = useState(false);
   const [pageState, setPageState] = useState(['UAH', false, false, false]);
   const [timerId, setTimerId] = useState(null);
-  const [number, setNumber] = useState('');
-  const [choice, setChoice] = useState('');
-  const [currencyChoice, setCurrencyChoice] = useState('');
-  const [numberError, setNumberError] = useState('*Це поле є обов’язковим до заповнення');
-
-  const [formValid, setFormValid] = useState(false);
+  const [option1, setOption1] = useState("1");
+  const [option2, setOption2] = useState("");
+  const [textInput, setTextInput] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
-    if ((numberError && (choice === "")) || (currencyChoice === "")) {
-      setFormValid(false);
-    } else {
-      setFormValid(true);
-    }
-  }, [numberError, choice, currencyChoice]);
+    if(formChange){
+    validateForm();}
+  }, [option1, option2, textInput])
 
-  const numberHandler = (e) => {
-    setNumber(e.target.value);
-    if (e.target.value.length === 0) {
-      setNumberError('*Це поле є обов’язковим до заповнення');
+  const handleOption1Change = (parameter) => {
+    setOption1(prevParameter => parameter);
+  };
+
+  const handleOption2Change = (parameter) => {
+    setOption2(prevParameter => parameter);
+  };
+
+  const handleTextInputChange = (e) => {
+    setTextInput(prevParameter => e.target.value);
+    setFormChanged(prevChanged => true);
+  };
+
+  const validateForm = () => {
+    setFormChanged(prevChanged => true);
+    if (option1 === "" || (option2 === "" && textInput === "")) {
+      setIsFormValid(prevValidated => false);
+    } else {
+      setIsFormValid(prevValidated => true);
     }
   };
 
@@ -92,7 +111,7 @@ function But() {
   function setCurrency(currencyName) {
     let newPageState = pageState;
     newPageState[0] = currencyName;
-    setPageState(pageState => [...pageState, ...newPageState]);
+    setPageState(pageState => newPageState);
   }
 
   function togglePopup(number){
@@ -140,8 +159,8 @@ function But() {
                 <CurrencyButton
                   valueName="first-currency"
                   idName="first-currency"
-                  onClickFunction={() => setCurrency('UAH')}
-                  checked={currencyChoice === 'first-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
+                  onClickFunction={() => {setCurrency('UAH'); handleOption1Change("1")}}
+                  checked = {option1 === "1"}
                 ></CurrencyButton>
                 <label htmlFor="first-currency" id="first-currency-label">
                   <div className="currency-button-image">
@@ -152,8 +171,8 @@ function But() {
                 <CurrencyButton
                   valueName="second-currency"
                   idName="second-currency"
-                  onClickFunction={() => setCurrency('USD')}
-                  checked={currencyChoice === 'second-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
+                  onClickFunction={() => {setCurrency('USD'); handleOption1Change("2")}}
+                  onBlur=""
                 ></CurrencyButton>
                 <label htmlFor="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
@@ -164,8 +183,7 @@ function But() {
                 <CurrencyButton
                   valueName="third-currency"
                   idName="third-currency"
-                  onClickFunction={() => setCurrency('EUR')}
-                  checked={currencyChoice === 'third-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
+                  onClickFunction={() => {setCurrency('EUR'); handleOption1Change("3")}}
                 ></CurrencyButton>
                 <label htmlFor="third-currency" id="third-currency-label">
                   <div className="currency-button-image">
@@ -174,13 +192,13 @@ function But() {
                   <div>EUR</div>
                 </label>
               </div>
-              <div className="donat-block__second-button-block">
+              <div className={((!isFormValid && formChange) && (option2 === "" && textInput === "")) ? "donat-block__second-button-block__disabled" : "donat-block__second-button-block"}>
                 <input
                   type="radio"
                   name="can-help-button2"
                   value="first-number"
                   id="first-number"
-                  checked={choice === 'first-number'} onChange={(e) => setChoice(e.target.value)}
+                  onChange={() => handleOption2Change("1")}
                 />
                 <label htmlFor="first-number">
                   <div className="currency-button-image">
@@ -193,7 +211,8 @@ function But() {
                   name="can-help-button2"
                   value="second-number"
                   id="second-number"
-                  checked={choice === 'second-number'} onChange={(e) => setChoice(e.target.value)}
+                  onChange={() => handleOption2Change("2")}
+                  onBlur=""
                 />
                 <label htmlFor="second-number">
                   <div className="currency-button-image">
@@ -206,7 +225,8 @@ function But() {
                   name="can-help-button2"
                   value="third-number"
                   id="third-number"
-                  checked={choice === 'third-number'} onChange={(e) => setChoice(e.target.value)}
+                  onChange={() => handleOption2Change("3")}
+                  onBlur=""
                 />
                 <label htmlFor="third-number">
                   <div className="currency-button-image">
@@ -215,17 +235,16 @@ function But() {
                   <div>{moneyCounts[2]}</div>
                 </label>
               </div>
-              <input type="number" className={numberError ? 'active-error' : 'right-block-name'} placeholder="Запропонувати іншу сумму"  onChange={(e) => numberHandler(e)}
-                value={number}
-                name="number"/>
-              {numberError && <div className="input-error">{numberError}</div>}
+              <input type="number" className={(!isFormValid && formChange) && (option2 === "" && textInput === "") ? "text_input__disabled" : "text_input"} placeholder="Запропонувати іншу сумму"  onChange={handleTextInputChange}
+                name="number" onBlur=""/>
+              <div className={(!isFormValid && formChange) && (option2 === "" && textInput === "") ? "input-error-currency" : "input-error-currency__hidden"}>* Це поле є обов'язковим для заповнення</div>
+              </form>
               <div className="donat-block__third-button-block">
-                <ButtonFunc class="donat-button1" type="submit" disabled={!formValid}>
+                <button class="donat-button1" onClick ={() => { if(isFormValid && (option2 !== "" || textInput !== "")){submitFunction()} else {validateForm()}}}>
                   Донат за допомогою картки
                   <img src="/assets/icons/help1.svg" alt="button-img"></img>
-                </ButtonFunc>
+                </button>
               </div>
-            </form>
             <div className="donat-block__fourth-button-block">
               <a
                 href="https://www.paypal.com/donate/?hosted_button_id=2K9ZZ8GQGYMFQ"
