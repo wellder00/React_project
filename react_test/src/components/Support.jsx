@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import FormPopap from './FormPopap';
 
-function But() {
+function Support() {
   const [isModalOpen, setModalOpen] = useState(false);
-    const setModalState = (state) => {    
-    setModalOpen(state);   
+  const setModalState = (state) => {
+    setModalOpen(state);
   };
-  
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
@@ -17,17 +17,25 @@ function But() {
   const [textDirty, setTextDirty] = useState(false);
   const [nameError, setNameError] = useState('*Це поле є обов’язковим до заповнення');
   const [emeilError, setEmeilError] = useState('*Це поле є обов’язковим до заповнення');
-  const [numberError, setNumberError] = useState('*Це поле є обов’язковим до заповнення');
+  const [numberError, setNumberError] = useState('');
   const [textError, setTextError] = useState('*Це поле є обов’язковим до заповнення');
   const [formValid, setFormValid] = useState(false);
+  const [checked, setChecked] = useState(false);
+
+  console.log(checked)
+  console.log(formValid)
+
+
+
+ 
 
   useEffect(() => {
-    if (nameError || emeilError || numberError || textError) {
+    if (nameError || emeilError || textError) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
-  }, [nameError, emeilError, numberError, textError]);
+  }, [nameError, emeilError, textError]);
 
   const nameHandler = (e) => {
     setName(e.target.value);
@@ -55,16 +63,15 @@ function But() {
 
   const numberHandler = (e) => {
     setNumber(e.target.value);
-    const reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
+    const reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     if (!reg.test(e.target.value)) {
       setNumberError('*Невірний формат номеру');
     }
-
     if (reg.test(e.target.value)) {
       setNumberError('');
     }
     if (e.target.value.length === 0) {
-      setNumberError('*Це поле є обов’язковим до заповнення');
+      setNumberError('*Опціонально');
     }
   };
 
@@ -99,7 +106,6 @@ function But() {
       // here, maybe an exception
     }
   };
-
 
   return (
     <div className="support">
@@ -151,10 +157,13 @@ function But() {
                 onBlur={(e) => blurHandler(e)}
                 name="tel"
                 type="tel"
-                placeholder="Номер телефону"
-                required
+                placeholder="Номер телефону"               
               />
-              {numberError && numberDirty && <div className="input-error">{numberError}</div>}
+              {numberError && numberDirty ? (
+                <div className="input-error">{numberError} </div>
+              ) : (
+                <div className="text-under-block">*Опціонально</div>
+              )}
             </div>
 
             <div className="right-block__input-content">
@@ -170,30 +179,34 @@ function But() {
                 required
               ></textarea>
               <div className="right-block__input-content">
-                {textError && textDirty && <div className="input-error">{textError}</div>}
+                {textError && textDirty ? (
+                  <div className="input-error">{textError} </div>
+                ) : (
+                  <div className="text-under-block">Не більше 500 символів</div>
+                )}
               </div>
             </div>
             <div className="right-block-checkbox">
-              <input type="checkbox" required />
-              <label onClick={() => setModalState(true)} className={'right-block-check'}>
+              <input              
+              type="checkbox"
+              checked={checked} onChange={() => setChecked(!checked)}
+              required />
+              <label onClick={() => setModalState(true)} className={checked === false && formValid ? 'right-block-check-erorr' : 'right-block-check' }>
                 Я погоджуюся з політикою конфіденційності
               </label>
+              {checked === false && formValid && <div className="text-under-block-check">*Погодження з політикою конфіденційності є обов’язковим</div>}             
             </div>
-            <button
+            <button type='submit'
               disabled={!formValid}
-              className={formValid ? 'support-button' : 'support-button__disabled'}
-            >
+              className={formValid ? 'support-button' : 'support-button__disabled'}            >
               Відправити форму
             </button>
           </form>
         </div>
       </div>
-      <FormPopap           
-            isModalOpen={isModalOpen}
-            setModalState={setModalState}
-          />
+      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />
     </div>
   );
 }
 
-export default But;
+export default Support;

@@ -12,7 +12,7 @@ function DocumentPage() {
         <div className="document-page__wrapper">
           <h2>Документація та звітність</h2>
           <div>
-            <img src="assets/image/diplom.jpg" alt="" />
+            <img src="assets/image/diplom.jpg" alt="diplom" />
           </div>
         </div>
     </div>

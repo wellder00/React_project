@@ -91,7 +91,7 @@
       border: none;
       border-bottom: 1px solid black;
       resize: none;
-      padding-left: 16px;
+      padding: 16px;
       
   
       &:hover:not(:focus) {
@@ -116,7 +116,7 @@
   border: none;
   border-bottom: 2px solid rgb(252, 0, 0);
   resize: none;
-  padding-left: 16px;
+  padding: 16px;
   &:hover:not(:focus) {
     background-color: rgba(31, 30, 27, 0.1);
     border-bottom: 1px solid rgb(238, 2, 2);
@@ -147,6 +147,7 @@
 }
 
 .right-block-checkbox {
+  position: relative;
   input {
     position: relative;
     zoom: 1.5;
@@ -161,6 +162,9 @@
 .right-block-check {
   text-decoration-line: underline;
 }
+.right-block-check-erorr {
+  color: #f22b2b;
+}
 .right-block__input-content {
   position: relative;  
 }
@@ -173,4 +177,29 @@
   z-index: 5;
   bottom: 5px;
   left: 5px;
+
+}
+
+.text-under-block {
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #808080;
+  z-index: 5;
+  bottom: 5px;
+  left: 5px;  
+}
+
+.text-under-block-check{
+  position: relative;
+  margin-top: 12px;
+  margin-left: 22px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #f22b2b;
+  z-index: 5;
+  bottom: 5px;
+  left: 5px;  
 }
