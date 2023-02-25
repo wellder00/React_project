@@ -49,9 +49,9 @@ const clipboard = {
   27: "New York ,USA",
   28: "001-1-000080",
   29: "CHASUS33",
-  30: "",
-  31: "",
-  32: ""
+  30: "Назва компанії: БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””; IBAN код: UA643515330000026009005902082; Назва банку: АТ КБ \"ПриватБанк\", Адреса банку: Україна, м. Київ, вулиця Грушевського, будинок 1Д; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33",
+  31: "Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA193515330000026000005903392; Назва банку: SC CB \"PRIVATBANK\"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: Commerzbank AG; Адреса банку кореспондента: Frankfurt am Main, Germany; Рахунок в банку кореспонденті: 400886700401; SWIFT код банку кореспондента: COBADEFF",
+  32: "Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA433515330000026001035904638; Назва банку: SC CB \"PRIVATBANK\"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: JP Morgan Chase Bank; Адреса банку кореспондента: New York, USA; Рахунок в банку кореспонденті: 001-1-000080; SWIFT код банку кореспондента: CHASUS33"
 }
 
 
