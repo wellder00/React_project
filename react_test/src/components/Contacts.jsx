@@ -291,7 +291,7 @@ function Contacts() {
                 required
               ></textarea>
               <div className="right-block__input-content">
-                {textError && textDirty && <div className="input-error">{textError}</div>}
+                {textError && textDirty && <div className="input-error-currency">{textError}</div>}
               </div>
             </div>
             <div className="right-block-checkbox">
