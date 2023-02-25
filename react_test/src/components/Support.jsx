@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import FormPopap from './FormPopap';
+import InportForm from './InportForm';
+
+const sendForm = () => {
+  const supportForm = document.querySelector('.support__form')
+
+  supportForm.addEventListener('submit', e => {
+    e.preventDefault();
+  })
+  
+}
 
 function Support() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -22,12 +32,6 @@ function Support() {
   const [formValid, setFormValid] = useState(false);
   const [checked, setChecked] = useState(false);
 
-  console.log(checked)
-  console.log(formValid)
-
-
-
- 
 
   useEffect(() => {
     if (nameError || emeilError || textError) {
@@ -106,7 +110,7 @@ function Support() {
       // here, maybe an exception
     }
   };
-
+  
   return (
     <div className="support">
       <div className="support-wrapper _container">
@@ -122,7 +126,7 @@ function Support() {
           </p>
         </div>
         <div className="right-block">
-          <form>
+          <form className='support__form'>
             <div className="right-block__input-content">
               <input
                 onChange={(e) => nameHandler(e)}
@@ -204,7 +208,7 @@ function Support() {
           </form>
         </div>
       </div>
-      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />
+      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />      
     </div>
   );
 }
