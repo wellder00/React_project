@@ -91,7 +91,7 @@ function Contacts() {
               <p>Email</p>
               <div>3232605@gmail.com</div>
               <section className="contacts-socials-icon">
-                <div className="footer-socials-icon">
+                <div className="footer-socials-icon-contacts">
                   <a href="https://www.facebook.com/A-help-Ukraine-107200221938176/">
                     <svg
                       width="48"
@@ -127,7 +127,7 @@ function Contacts() {
                     </svg>
                   </a>
                 </div>
-                <div className="footer-socials-icon">
+                <div className="footer-socials-icon-contacts">
                   <a href="https://www.instagram.com/a_help_ukraine/">
                     <svg
                       width="48"
@@ -182,7 +182,7 @@ function Contacts() {
                     </svg>
                   </a>
                 </div>
-                <div className="footer-socials-icon">
+                <div className="footer-socials-icon-contacts">
                   <a href="https://t.me/+iYP6EAe1wKc0MjM6">
                     <svg
                       width="48"
@@ -206,7 +206,7 @@ function Contacts() {
                     </svg>
                   </a>
                 </div>
-                <div className="footer-socials-icon">
+                <div className="footer-socials-icon-contacts">
                   <a href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk">
                     <svg
                       width="48"
