@@ -22,12 +22,6 @@ function Support() {
   const [formValid, setFormValid] = useState(false);
   const [checked, setChecked] = useState(false);
 
-  console.log(checked)
-  console.log(formValid)
-
-
-
- 
 
   useEffect(() => {
     if (nameError || emeilError || textError) {
