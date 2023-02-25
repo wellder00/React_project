@@ -11,7 +11,7 @@ function SuccessfulStoriesPage() {
     });
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const setModalState = (state, index) => {
+  const setModalState = (state, index) => {    
     setModalOpen(state);
     setSelectedItemIndex(index);
   };

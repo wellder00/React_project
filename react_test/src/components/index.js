@@ -21,6 +21,7 @@ export {default as OurTeams} from "./OurTeams";
 export {default as Contacts} from "./Contacts";
 export {default as Slider} from "./Slider";
 export {default as FormPopap} from "./FormPopap";
+export {default as DocumentPage} from "./DocumentPage";
 
 
 
