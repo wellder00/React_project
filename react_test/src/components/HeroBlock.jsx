@@ -4,6 +4,8 @@ import Slider from './Slider';
 import one from '../assets/one.jpg';
 import two from '../assets/two.jpg';
 import three from '../assets/three.jpg';
+import four from '../assets/four.jpg';
+import five from '../assets/five.jpg';
 
 const imgArr = [
   {
@@ -14,6 +16,12 @@ const imgArr = [
   },
   {
     src: three
+  },
+  {
+    src: four
+  },
+  {
+    src: five
   }
 ];
 

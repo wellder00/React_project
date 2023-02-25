@@ -143,7 +143,7 @@ function But() {
                   onClickFunction={() => setCurrency('UAH')}
                   checked={currencyChoice === 'first-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
-                <label for="first-currency" id="first-currency-label">
+                <label htmlFor="first-currency" id="first-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -155,7 +155,7 @@ function But() {
                   onClickFunction={() => setCurrency('USD')}
                   checked={currencyChoice === 'second-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
-                <label for="second-currency" id="second-currency-label">
+                <label htmlFor="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -167,7 +167,7 @@ function But() {
                   onClickFunction={() => setCurrency('EUR')}
                   checked={currencyChoice === 'third-currency'} onChange={(e) => setCurrencyChoice(e.target.value)}
                 ></CurrencyButton>
-                <label for="third-currency" id="third-currency-label">
+                <label htmlFor="third-currency" id="third-currency-label">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -182,7 +182,7 @@ function But() {
                   id="first-number"
                   checked={choice === 'first-number'} onChange={(e) => setChoice(e.target.value)}
                 />
-                <label for="first-number">
+                <label htmlFor="first-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -195,7 +195,7 @@ function But() {
                   id="second-number"
                   checked={choice === 'second-number'} onChange={(e) => setChoice(e.target.value)}
                 />
-                <label for="second-number">
+                <label htmlFor="second-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
@@ -208,7 +208,7 @@ function But() {
                   id="third-number"
                   checked={choice === 'third-number'} onChange={(e) => setChoice(e.target.value)}
                 />
-                <label for="third-number">
+                <label htmlFor="third-number">
                   <div className="currency-button-image">
                     <img src="/assets/icons/button_check.svg" alt="copy_active"></img>
                   </div>
