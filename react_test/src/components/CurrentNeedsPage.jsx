@@ -2,22 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 import ButtonFunc from './ButtonFunc';
 import CurrentNeedsPopap from './CurrentNeedsPopap';
-
+import { HashLink } from 'react-router-hash-link';
 
 function CurrentNeeds() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
   const setModalState = (state, index) => {
-    setModalOpen(state);    
+    setModalOpen(state);
     setSelectedItemIndex(index);
   };
 
   // скролл вверх при переключении страницы
   window.scrollTo({
     top: 0,
-    left: 0
+    left: 0,
   });
- 
+
   const stories = [
     {
       src: '/assets/image/cur1.jpg',
@@ -53,9 +53,9 @@ function CurrentNeeds() {
     },
   ];
   return (
-    <div className="currentNeeds">
+    <div>
       <div className="currentNeeds-wrapper _container">
-        <h2 className='currentNeeds__page-tetle'>Поточні потреби</h2>
+        <h2 className="currentNeeds__page-tetle">Поточні потреби</h2>
         <div className="card-block">
           {stories.map((item, index) => {
             return (
@@ -70,21 +70,19 @@ function CurrentNeeds() {
                     <div className="card-block__description">{item.description}</div>
                   </div>
                 </div>
-                <a href="#button_help">
-                <ButtonFunc class="card-block__buttons">Допомогти</ButtonFunc>
-                </a>
+                <HashLink smooth to="/#donate">
+                  <ButtonFunc class="card-block__buttons">Допомогти</ButtonFunc>
+                </HashLink>
               </div>
             );
           })}
         </div>
 
         <div className="button-single-block">
-      
-
           <CurrentNeedsPopap
             selectedItem={stories[selectedItemIndex]}
             isModalOpen={isModalOpen}
-            setModalState={setModalState}                       
+            setModalState={setModalState}
           />
         </div>
       </div>

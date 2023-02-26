@@ -182,3 +182,26 @@
     background-color: #FFE9A8;
   }
 }
+
+.document-button{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  background: #ffd966;
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 85px;
+  width: 420px;
+  height: 47px;
+  border: 0;
+  cursor: pointer; 
+  &:hover{
+    background-color: #FFE9A8;
+  }
+}

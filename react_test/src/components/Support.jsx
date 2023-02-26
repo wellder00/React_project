@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import FormPopap from './FormPopap';
-import InportForm from './InportForm';
-
-const sendForm = () => {
-  const supportForm = document.querySelector('.support__form')
-
-  supportForm.addEventListener('submit', e => {
-    e.preventDefault();
-  })
-  
-}
+import FormPopap1 from './FormPopap1';
 
 function Support() {
   const [isModalOpen, setModalOpen] = useState(false);
-  const setModalState = (state) => {
-    setModalOpen(state);
-  };
-
+  const [isModalOpen1, setModalOpen1] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
@@ -30,16 +18,33 @@ function Support() {
   const [numberError, setNumberError] = useState('');
   const [textError, setTextError] = useState('*Це поле є обов’язковим до заповнення');
   const [formValid, setFormValid] = useState(false);
+  const [formValid1, setFormValid1] = useState(false);
   const [checked, setChecked] = useState(false);
+  
 
+  const setModalState = (state) => {
+    setModalOpen(state);
+  };
+  const setModalState1 = (state) => {
+    setModalOpen1(state);
+  };
 
   useEffect(() => {
-    if (nameError || emeilError || textError) {
+    if (nameError || emeilError || textError || !checked) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
+  }, [nameError, emeilError, textError, checked]);
+
+  useEffect(() => {
+    if (nameError || emeilError || textError ) {
+      setFormValid1(false);
+    } else {
+      setFormValid1(true);
+    }
   }, [nameError, emeilError, textError]);
+ 
 
   const nameHandler = (e) => {
     setName(e.target.value);
@@ -60,7 +65,7 @@ function Support() {
     if (result.test(String(e.target.value))) {
       setEmeilError('');
     }
-    if (e.target.value.length < 0) {
+    if (e.target.value.length === 0) {
       setEmeilError('*Це поле є обов’язковим до заповнення');
     }
   };
@@ -110,7 +115,7 @@ function Support() {
       // here, maybe an exception
     }
   };
-  
+
   return (
     <div className="support">
       <div className="support-wrapper _container">
@@ -126,7 +131,7 @@ function Support() {
           </p>
         </div>
         <div className="right-block">
-          <form className='support__form'>
+          <form className="support__form">
             <div className="right-block__input-content">
               <input
                 onChange={(e) => nameHandler(e)}
@@ -157,13 +162,15 @@ function Support() {
               <input
                 onChange={(e) => numberHandler(e)}
                 value={number}
-                className={numberError && numberDirty ? 'active-error' : 'right-block-name'}
+                className={
+                  numberError && numberDirty && number ? 'active-error' : 'right-block-name'
+                }
                 onBlur={(e) => blurHandler(e)}
                 name="tel"
                 type="tel"
-                placeholder="Номер телефону"               
+                placeholder="Номер телефону"
               />
-              {numberError && numberDirty ? (
+              {numberError && numberDirty && number ? (
                 <div className="input-error">{numberError} </div>
               ) : (
                 <div className="text-under-block">*Опціонально</div>
@@ -191,24 +198,40 @@ function Support() {
               </div>
             </div>
             <div className="right-block-checkbox">
-              <input              
-              type="checkbox"
-              checked={checked} onChange={() => setChecked(!checked)}
-              required />
-              <label onClick={() => setModalState(true)} className={checked === false && formValid ? 'right-block-check-erorr' : 'right-block-check' }>
+              <input
+                type="checkbox"                
+                checked={checked}
+                onChange={() => setChecked(!checked)}               
+                required
+              />
+              <label
+                onClick={() => setModalState(true)}                
+                className={
+                  checked === false && formValid1 ? 'right-block-check-erorr' : 'right-block-check'
+                }
+              >
                 Я погоджуюся з політикою конфіденційності
               </label>
-              {checked === false && formValid && <div className="text-under-block-check">*Погодження з політикою конфіденційності є обов’язковим</div>}             
+              {checked === false && formValid1 && (
+                <div className="text-under-block-check">
+                  *Погодження з політикою конфіденційності є обов’язковим
+                </div>
+              )}
             </div>
-            <button type='submit'
+            <button
+              onClick={() => setModalState1(true)}
+              type="submit"
               disabled={!formValid}
-              className={formValid ? 'support-button' : 'support-button__disabled'}            >
+              className={formValid ? 'support-button' : 'support-button__disabled'}
+            >
               Відправити форму
             </button>
           </form>
         </div>
       </div>
-      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />      
+
+      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />
+      <FormPopap1 isModalOpen1={isModalOpen1} setModalState1={setModalState1} />
     </div>
   );
 }

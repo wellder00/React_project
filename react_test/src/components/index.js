@@ -23,6 +23,8 @@ export {default as Slider} from "./Slider";
 export {default as FormPopap} from "./FormPopap";
 export {default as DocumentPage} from "./DocumentPage";
 export {default as InportForm} from "./InportForm";
+export {default as BreadCrumbs} from "./BreadCrumbs";
+export {default as FormPopap1} from "./FormPopap1";
 
 
 

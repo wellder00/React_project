@@ -1,11 +1,119 @@
-.document-page{
- margin-top: 200px;
- display: flex;
- justify-content: center;
+.document-page {
+  display: flex;
+  justify-content: center;
 }
 
-.document-page__wrapper{
- div {
-  margin-top: 100px;
- }
+.document-page__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+  }
+  section {
+    display: block;
+    box-sizing: border-box;
+    width: 680px;
+    height: 67px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  p {
+    display: block;
+    box-sizing: border-box;
+    width: 680px;
+    height: 156px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 72px;
+    padding: 0 40px;
+  }
+}
+
+.first-section {
+  display: flex;
+  gap: 32px;
+  margin-top: 50px;
+  margin-bottom: 32px;
+  div {
+    padding: 0px 24px;
+    width: 272px;
+    height: 68px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.second-section {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.second-section__diplom {
+  flex: 1.1;
+  width: 380px;
+  height: 470px;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.second-section__right-block {
+  display: flex;
+  flex-direction: column;
+  flex: 0.9;
+  gap: 32px;
+  div {
+    box-sizing: border-box;
+    padding: 14px 24px;
+    gap: 8px;
+    width: 285px;
+    height: 235px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    padding-top: 70px;
+  }
+}
+
+.last-section_document {
+  width: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.last-section__left-block {
+  position: relative;
+  bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
 }

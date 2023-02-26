@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonFunc from './ButtonFunc';
+import { Link } from 'react-router-dom';
 
 function Footer(props) {
   return (
@@ -11,14 +12,18 @@ function Footer(props) {
             Якщо ви не знайшли інформацію, яка вас цікавить, заповніть, будь ласка, форму за
             посиланням нижче. Ми надішлемо відповідь на вашу електронну пошту.
           </span>
-          <ButtonFunc class="footer-button"> Запит на додаткову інформацію</ButtonFunc>
+          <Link className='link_contacts' to="/Contacts">
+            <ButtonFunc class="footer-button"> Запит на додаткову інформацію</ButtonFunc>
+          </Link>
         </div>
         <div className="footer-right-block">
           <h2>Контакти</h2>
           <p>Контактний номер</p>
           <div>+380 (96) 052 72 91</div>
           <p>Email</p>
-          <div className="footer-email"><a href = "mailto:3232605@gmail.com">3232605@gmail.com</a></div>
+          <div className="footer-email">
+            <a href="mailto:3232605@gmail.com">3232605@gmail.com</a>
+          </div>
           <p>Адреса</p>
           <div>м. Харків, вул. Повздовжня, 4</div>
           <section>

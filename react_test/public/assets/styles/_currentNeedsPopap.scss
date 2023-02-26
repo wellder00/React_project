@@ -1,8 +1,8 @@
-.current_myModal__popap{
+.current_myModal__popap {
   position: relative;
-width: 1240px;
-height: 658px;
-background: #F1F1F1;
+  width: 1240px;
+  height: 658px;
+  background: #f1f1f1;
 }
 
 .myModal__bg_content_left-block_img {
@@ -11,7 +11,7 @@ background: #F1F1F1;
   height: 570px;
 }
 
-.myModal__popap_close__position{
+.myModal__popap_close__position {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -19,15 +19,16 @@ background: #F1F1F1;
   z-index: 40;
   cursor: pointer;
 }
-.myModal__bg_content__wrapper{
+.myModal__bg_content__wrapper {
   padding: 60px 20px 44px 44px;
   display: flex;
   gap: 40px;
 }
 
-.current-needs-myModal_img { 
+.current-needs-myModal_img {
   width: 100%;
   height: 100%;
+  object-fit: cover
 }
 
 .myModal__bg_content_right-block__scroll {

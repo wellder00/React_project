@@ -21,6 +21,8 @@
 @import '../public/assets/styles/slider.scss';
 @import '../public/assets/styles/formPopap.scss';
 @import '../public/assets/styles/documentPage.scss';
+@import '../public/assets/styles/_breadcrumbs.scss';
+@import '../public/assets/styles/_formPopap1.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 body {
@@ -40,15 +42,17 @@ body {
   padding: 0 15px;
 }
 
-.layout-wrapper{
-  margin: 0;  
+.layout-wrapper {
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.wrapper-outlet{
+.wrapper-outlet {
   flex-grow: 1;
 }
-.layout-wrapper__footer{
+.layout-wrapper__footer {
   flex-shrink: 0;
 }
+
+
