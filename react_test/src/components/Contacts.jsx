@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import FormPopap from './FormPopap';
+import FormPopap1 from './FormPopap1';
 
 function Contacts() {
   const [name, setName] = useState('');
@@ -10,14 +12,34 @@ function Contacts() {
   const [nameError, setNameError] = useState('*Це поле є обов’язковим до заповнення');
   const [emeilError, setEmeilError] = useState('*Це поле є обов’язковим до заповнення');
   const [textError, setTextError] = useState('*Це поле є обов’язковим до заповнення');
-
+  const [checked, setChecked] = useState(false);
   const [formValid, setFormValid] = useState(false);
+  const [formValid1, setFormValid1] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen1, setModalOpen1] = useState(false);
 
-  useEffect(() => {
-    if (nameError || emeilError || textError) {
+  const setModalState = (state) => {
+    setModalOpen(state);
+  };
+
+   const setModalState1 = (state) => {
+    setModalOpen1(state);
+  };
+
+
+ useEffect(() => {
+    if (nameError || emeilError || textError || !checked) {
       setFormValid(false);
     } else {
       setFormValid(true);
+    }
+  }, [nameError, emeilError, textError, checked]);
+
+  useEffect(() => {
+    if (nameError || emeilError || textError ) {
+      setFormValid1(false);
+    } else {
+      setFormValid1(true);
     }
   }, [nameError, emeilError, textError]);
 
@@ -299,12 +321,29 @@ function Contacts() {
                 </div>
               </div>
               <div className="right-block-checkbox">
-                <input type="checkbox" required />
-                <label className={'right-block-check'}>
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => setChecked(!checked)}
+                  required
+                />
+                <label
+                  onClick={() => setModalState(true)}
+                  className={
+                    checked === false && formValid1 ? 'right-block-check-erorr' : 'right-block-check'
+                  }
+                >
                   Я погоджуюся з політикою конфіденційності
                 </label>
+                {checked === false && formValid1 && (
+                  <div className="text-under-block-check">
+                    *Погодження з політикою конфіденційності є обов’язковим
+                  </div>
+                )}
               </div>
               <button
+               onClick={() => setModalState1(true)}
+               type="submit"
                 disabled={!formValid}
                 className={formValid ? 'support-button' : 'support-button__disabled'}
               >
@@ -314,6 +353,8 @@ function Contacts() {
           </div>
         </div>
       </div>
+      <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />
+       <FormPopap1 isModalOpen1={isModalOpen1} setModalState1={setModalState1} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ButtonFunc from './ButtonFunc';
 import CurrentNeedsPopap from './CurrentNeedsPopap';
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function CurrentNeeds() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -66,9 +67,9 @@ function CurrentNeeds() {
                   </div>
                 </div>
                
-                <a href="#button_help">
+                <HashLink smooth to="/#donate">
                 <ButtonFunc class="card-block__buttons">Допомогти</ButtonFunc>
-                </a>
+                </HashLink>
               </div>
             );
           })}

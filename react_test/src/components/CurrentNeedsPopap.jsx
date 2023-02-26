@@ -1,5 +1,6 @@
 import { Dialog } from '@headlessui/react';
 import ButtonFunc from './ButtonFunc';
+import { HashLink } from 'react-router-hash-link';
 
 export default function MyModal({ isModalOpen, setModalState, selectedItem }) {
   return (
@@ -51,9 +52,9 @@ export default function MyModal({ isModalOpen, setModalState, selectedItem }) {
                       {selectedItem.sum}
                     </section>
                     <div>{selectedItem.longDesc}</div>
-                    <a href="#button_help">
+                    <HashLink smooth to="/#donate">
                       <ButtonFunc onClick={() => setModalState(false, 0)} class="current-need-popap-botton">Допомогти</ButtonFunc>
-                    </a>
+                    </HashLink>
                   </div>
                 </div>
               </div>

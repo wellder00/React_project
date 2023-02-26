@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ButtonFunc from './ButtonFunc';
+import { HashLink } from 'react-router-hash-link';
+
 
 function But() {
   const [visiblePopup1, setvisiblePopup1] = React.useState(false);
@@ -52,9 +54,11 @@ function But() {
   return (
     <div className="header">
       <div className="header-container _container">
-        <Link to="/" href="#!" className="logo header__logo">
-          <img src="/assets/icons/1.svg" alt="Logo" />
-        </Link>
+      
+          <HashLink smooth to="/#hero" className="logo header__logo">        
+             <img  src="/assets/icons/1.svg" alt="Logo" />          
+          </HashLink>
+        
         <nav className="header__nav">
           <ul className="header__menu-list">
             <li onClick={togglevisiblePopup1} className="header__nav" ref={sortRef1}>
@@ -115,9 +119,11 @@ function But() {
             </li>
           </ul>
         </nav>
-        <a href="#button_help">
-          <ButtonFunc class="header-button">Допомогти</ButtonFunc>
-        </a>
+       
+          <HashLink smooth to="/#donate">
+           <ButtonFunc class="header-button">Допомогти</ButtonFunc>
+         </HashLink>
+        
       </div>
     </div>
   );
