@@ -53,6 +53,7 @@ const clipboard = {
   32: 'Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA433515330000026001035904638; Назва банку: SC CB "PRIVATBANK"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: JP Morgan Chase Bank; Адреса банку кореспондента: New York, USA; Рахунок в банку кореспонденті: 001-1-000080; SWIFT код банку кореспондента: CHASUS33',
 };
 
+
 const money = {
   UAH: [100, 200, 500],
   USD: [50, 100, 200],
