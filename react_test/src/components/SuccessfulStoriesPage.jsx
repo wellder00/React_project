@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CurrentSwiper from './CurrentSwiper';
+import CurrentSwiper from './CurrentSwiper1';
 import SuccessfulStoriesPopap from './SuccessfulStoriesPopap';
 
 function SuccessfulStoriesPage() {

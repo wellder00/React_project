@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ButtonFunc from './ButtonFunc';
-import CurrentSwiper from './CurrentSwiper';
+import CurrentSwiper1 from './CurrentSwiper1';
+import CurrentSwiper2 from './CurrentSwiper2';
+import CurrentSwiper3 from './CurrentSwiper3';
 import SuccessfulStoriesPopap from './SuccessfulStoriesPopap';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +30,9 @@ function SuccessfulStories() {
     України. Діти були дуже задоволені і довго дякували. Чарівниками бути просто!
     Особливо, коли є справжні друзі! Ми щиро вдячні кожному, хто допомагає нашій
     команді робити дітей з деокупації трохи щасливіше!`,
+    swiper: <CurrentSwiper1 index={selectedItemIndex} handleClick={setModalState}/>
     },
+    
     {
       id: 228,
       title: 'Видачу корму для родин, що прихистили безпритульних тварин',
@@ -44,6 +48,7 @@ function SuccessfulStories() {
     Ця історія має гарний кінець. Пес знайшов добру родину, що його прихистила. Але  таких покинутих тварин зараз багато, вони мерзнуть та голодують.
     Ми щиро вдячні нашим партнерам, які допомагають нам кормами для тварин. Це дуже важливо. Особливо взимку.
     `,
+    swiper: <CurrentSwiper2 index={selectedItemIndex} handleClick={setModalState}/>
     },
     {
       id: 229,
@@ -59,6 +64,7 @@ function SuccessfulStories() {
     Наша команда звернулася по допомогу і керівниця ГО “Фенікс13” Наталія Меркулова передала нам ходунки. Вже у наступну поїздку ми привезли їх Тамарі.
     Для Тамари це було справжнє диво.
     Ми були щасливі, що змогли допомогти їй.`,
+    swiper: <CurrentSwiper3 index={selectedItemIndex} handleClick={setModalState}/>
     },
   ];
 
@@ -73,7 +79,7 @@ function SuccessfulStories() {
             return (
               <div className="card-block-stories" key={item.id}>
                 <div className="card-block-stories-img">
-                  <CurrentSwiper index={index} handleClick={setModalState} />
+                 {item.swiper}
                 </div>
                 <div onClick={() => setModalState(true, index)}>
                   <h4>{item.title}</h4>

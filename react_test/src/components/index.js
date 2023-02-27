@@ -7,7 +7,9 @@ export {default as SomeStats} from "./SomeStats";
 export {default as Support} from "./Support";
 export {default as SuccessfulStories} from "./SuccessfulStories";
 export {default as Swiper} from "./SwiperHero";
-export {default as CurrentSwiper} from "./CurrentSwiper";
+export {default as CurrentSwiper1} from "./CurrentSwiper1";
+export {default as CurrentSwiper2} from "./CurrentSwiper2";
+export {default as CurrentSwiper3} from "./CurrentSwiper3";
 export {default as Footer} from "./Footer";
 export {default as SuccessfulStoriesPopap} from "./SuccessfulStoriesPopap";
 export {default as SuccessfulStoriesPopapSwiper} from "./SuccessfulStoriesPopapSwiper";
@@ -28,4 +30,3 @@ export {default as FormPopap1} from "./FormPopap1";
 
 
 
-//export {default as HeaderPopap} from "./HeaderPopap";
