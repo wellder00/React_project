@@ -85,3 +85,8 @@ iframe {
     border-radius: 48px;
   }
 }
+
+.contacts-mail a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}

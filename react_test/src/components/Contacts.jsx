@@ -111,7 +111,7 @@ function Contacts() {
               <p>Контактний номер</p>
               <div>+380 (96) 052 72 91</div>
               <p>Email</p>
-              <div>3232605@gmail.com</div>
+              <div className = "contacts-mail"><a href="mailto:3232605@gmail.com">3232605@gmail.com</a></div>
               <section className="contacts-socials-icon">
                 <div className="footer-socials-icon-contacts">
                   <a href="https://www.facebook.com/A-help-Ukraine-107200221938176/">
