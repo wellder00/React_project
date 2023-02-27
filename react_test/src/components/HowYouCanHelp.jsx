@@ -8,7 +8,7 @@ function CurrencyButton(props) {
       name="can-help-button"
       value={props.valueName}
       id={props.idName}
-      onClick={props.onClickFunction}
+      onChange={props.onChangeFunction}
       checked={props.checked}
     />
   );
@@ -69,10 +69,18 @@ function But() {
   const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
+    function validateForm(){
+      setFormChanged((prevChanged) => true);
+    if (option1 === '' || (option2 === '' && textInput === '')) {
+      setIsFormValid((prevValidated) => false);
+    } else {
+      setIsFormValid((prevValidated) => true);
+    }
+    }
     if (formChange) {
       validateForm();
     }
-  }, [option1, option2, textInput]);
+  }, [option1, option2, textInput, formChange]);
   
 
   const handleOption1Change = (parameter) => {
@@ -88,7 +96,7 @@ function But() {
     setFormChanged((prevChanged) => true);
   };
 
-  const validateForm = () => {
+  const validateFormButtonFunc = () => {
     setFormChanged((prevChanged) => true);
     if (option1 === '' || (option2 === '' && textInput === '')) {
       setIsFormValid((prevValidated) => false);
@@ -162,7 +170,7 @@ function But() {
                 <CurrencyButton
                   valueName="first-currency"
                   idName="first-currency"
-                  onClickFunction={() => {
+                  onChangeFunction={() => {
                     setCurrency('UAH');
                     handleOption1Change('1');
                   }}
@@ -177,11 +185,10 @@ function But() {
                 <CurrencyButton
                   valueName="second-currency"
                   idName="second-currency"
-                  onClickFunction={() => {
+                  onChangeFunction={() => {
                     setCurrency('USD');
                     handleOption1Change('2');
                   }}
-                  onBlur=""
                 ></CurrencyButton>
                 <label htmlFor="second-currency" id="second-currency-label">
                   <div className="currency-button-image">
@@ -192,7 +199,7 @@ function But() {
                 <CurrencyButton
                   valueName="third-currency"
                   idName="third-currency"
-                  onClickFunction={() => {
+                  onChangeFunction={() => {
                     setCurrency('EUR');
                     handleOption1Change('3');
                   }}
@@ -230,7 +237,6 @@ function But() {
                   value="second-number"
                   id="second-number"
                   onChange={() => handleOption2Change('2')}
-                  onBlur=""
                 />
                 <label htmlFor="second-number">
                   <div className="currency-button-image">
@@ -244,7 +250,6 @@ function But() {
                   value="third-number"
                   id="third-number"
                   onChange={() => handleOption2Change('3')}
-                  onBlur=""
                 />
                 <label htmlFor="third-number">
                   <div className="currency-button-image">
@@ -263,7 +268,6 @@ function But() {
                 placeholder="Запропонувати іншу сумму"
                 onChange={handleTextInputChange}
                 name="number"
-                onBlur=""
               />
               <div
                 className={
@@ -277,12 +281,12 @@ function But() {
             </form>
             <div className="donat-block__third-button-block">
               <button
-                class="donat-button1"
+                className="donat-button1"
                 onClick={() => {
                   if (isFormValid && (option2 !== '' || textInput !== '')) {
                     submitFunction();
                   } else {
-                    validateForm();
+                    validateFormButtonFunc();
                   }
                 }}
               >
