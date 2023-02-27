@@ -7,7 +7,9 @@ function CurrentSwiper({index, handleClick}) {
   const imgArr = [
     {src: '/assets/image/1.jpg'},
     {src: '/assets/image/cur4.jpg'},
-    {src: '/assets/image/cur2.jpg'}
+    {src: '/assets/image/cur2.jpg'},
+    {src: '/assets/image/cur3.jpg'},
+    {src: '/assets/image/help1.jpg'},
   ];
   
   return (

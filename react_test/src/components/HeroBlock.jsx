@@ -6,6 +6,7 @@ import two from '../assets/two.jpg';
 import three from '../assets/three.jpg';
 import four from '../assets/four.jpg';
 import five from '../assets/five.jpg';
+import { HashLink } from 'react-router-hash-link';
 
 const imgArr = [
   {
@@ -28,7 +29,7 @@ const imgArr = [
 
 function But() {
   return (
-    <div className="herro">
+    <div id='hero' className="herro">
       <div className="wrapper-herro _container">
         <div className="content-block">
           <h1>Допоможіть постраждалим від війни</h1>
@@ -37,11 +38,11 @@ function But() {
             Тому, ми створили благодійний фонд “A help” і тепер допомогаємо людям.
             <div>Долучайся і ти.</div>
           </div>
-          <a href="#button_help">
+          <HashLink smooth to="/#donate">
             <ButtonFunc class="hero-button">
               Допомогти <img src="/assets/icons/3.svg" alt="arrow" />
             </ButtonFunc>
-          </a>
+            </HashLink>
         </div>
         <div className="herro-img-block">
           <Slider imgArr={imgArr}/>

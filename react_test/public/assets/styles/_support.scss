@@ -192,7 +192,7 @@
 }
 
 .text-under-block-check{
-  position: relative;
+  position: absolute;
   margin-top: 12px;
   margin-left: 22px;
   font-weight: 400;
@@ -202,4 +202,5 @@
   z-index: 5;
   bottom: 5px;
   left: 5px;  
+  top: 20px;
 }

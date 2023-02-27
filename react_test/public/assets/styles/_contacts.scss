@@ -7,7 +7,6 @@
 }
 
 .contacts__title {
-  margin-top: 200px;
   margin-bottom: 72px;
   font-weight: 500;
   font-size: 40px;
@@ -58,28 +57,28 @@ iframe {
   }
 }
 
-.second-contacts-block__left-block{
-
-  h2 {  font-weight: 500;
+.second-contacts-block__left-block {
+  h2 {
+    font-weight: 500;
     font-size: 40px;
     line-height: 120%;
   }
 }
 
-.footer-socials-icon-contacts{
+.footer-socials-icon-contacts {
   width: 48px;
   height: 48px;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   a {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  align-content: center;   
-  width: 48px;
-  height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 48px;
+    height: 48px;
   }
   a:hover {
     background: rgba(31, 30, 27, 0.1);

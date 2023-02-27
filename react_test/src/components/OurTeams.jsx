@@ -83,7 +83,7 @@ function OurTeams() {
             <span className='ourTeams__people-block-light'>Водій-волонтер</span>
           </div>
         </div>
-        <h2 className="ourTeams__title-pertners">Наша команда</h2>
+        <h2 className="ourTeams__title-pertners">Наші партнери</h2>
 
         <div className="ourTeams__partners-block__wrapper">
           <div className="ourTeams__partners-block">
