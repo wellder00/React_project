@@ -109,9 +109,6 @@ function But() {
 
   function clipboardCopying(number) {
     navigator.clipboard.writeText(clipboard[number]);
-    if (number > 29) {
-      togglePopup(number);
-    }
   }
 
   function setCurrency(currencyName) {
@@ -400,8 +397,8 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => clipboardCopying(30)}>
-                  Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(30); togglePopup(30)}}>
+                  Скопіювати все<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[1] && (
                   <div className="table-block__pop-up">
@@ -543,8 +540,8 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => clipboardCopying(31)}>
-                  Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(31); togglePopup(31)}}>
+                  Скопіювати все<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[2] && (
                   <div className="table-block__pop-up">
@@ -562,7 +559,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Назва компанії</div>
                   <div className="table-block__name">
-                    БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””
+                  CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””
                   </div>
                   <div className="table-block__image">
                     <img
@@ -574,7 +571,7 @@ function But() {
                 </div>
                 <div className="table-block__name-company">
                   <div className="table-block__title">IBAN код</div>
-                  <div className="table-block__name">UA643515330000026009005902082</div>
+                  <div className="table-block__name">UA433515330000026001035904638</div>
                   <div className="table-block__image">
                     <img
                       src="/assets/icons/copy_active.svg"
@@ -585,7 +582,7 @@ function But() {
                 </div>
                 <div className="table-block__name-company">
                   <div className="table-block__title">Назва банку</div>
-                  <div className="table-block__name">АТ КБ "ПриватБанк"</div>
+                  <div className="table-block__name"> SC CB "PRIVATBANK"</div>
                   <div className="table-block__image">
                     <img
                       src="/assets/icons/copy_active.svg"
@@ -597,7 +594,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Адреса банку</div>
                   <div className="table-block__name">
-                    Україна, м. Київ, вулиця Грушевського, будинок 1Д
+                  Ukraine, Kyiv, Hrushevsky Street, building 1D
                   </div>
                   <div className="table-block__image">
                     <img
@@ -632,7 +629,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Адреса компанії</div>
                   <div className="table-block__name">
-                    Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33
+                  Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33
                   </div>
                   <div className="table-block__image">
                     <img
@@ -686,8 +683,8 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => clipboardCopying(32)}>
-                  Copy all data<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
+                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(32); togglePopup(32)}}>
+                  Скопіювати все <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[3] && (
                   <div className="table-block__pop-up">
