@@ -81,7 +81,7 @@ function But() {
     if (formChange) {
       validateForm();
     }
-  }, [option1, option2, textInput, formChange]);
+  }, [option1, option2, textInput, formChange]);  
   
 
   const handleOption1Change = (parameter) => {
