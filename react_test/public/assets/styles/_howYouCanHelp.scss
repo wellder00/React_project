@@ -105,6 +105,7 @@
     -webkit-appearance: none;
   }
   .text_input {
+    cursor: pointer;
     appearance: none;
     -moz-appearance: textfield;
     outline: none;
@@ -117,11 +118,18 @@
     border-bottom: 2px solid #0275ed;
   }
   .text_input:focus{
+    cursor: text;
     appearance: none;
     -moz-appearance: textfield;
+    background-color: rgb(255, 255, 255);;
     border: none;
     border-bottom: 4px solid #0275ed;
   }
+  .text_input:blur{
+    appearance: none;
+    -moz-appearance: textfield;
+    border-bottom: 2px solid black;
+    margin-bottom: 28px;}
   .text_input__disabled {
     box-sizing: border-box;
     width: 498px;

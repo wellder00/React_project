@@ -29,7 +29,7 @@ function DocumentPage() {
         <section>Виписка з державного реєстру</section>
         <p>
           Звіт за 2022 рік<br/> Lorem ipsum dolor sit amet, cum sapientem honestatis ea, verear labores
-          feugait sea in, cu justo suscipiantur mel. Nov 22, 2022
+          feugait sea in, cu justo suscipiantur mel. 20 січня 2023
         </p>
         <div className="last-section_document">
           <div className="last-section__left-block">
