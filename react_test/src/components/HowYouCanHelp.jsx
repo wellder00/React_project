@@ -25,14 +25,14 @@ const clipboard = {
   4: 'Україна, м. Київ, вулиця Грушевського, будинок 1Д',
   5: '44773154',
   6: 'PBANUA2',
-  7: 'Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33',
+  7: 'Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333, 334',
   8: 'CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””',
   9: 'UA193515330000026000005903392',
   10: 'SC CB "PRIVATBANK"',
   11: 'Ukraine, Kyiv, Hrushevsky Street, building 1D',
   12: '44773154',
   13: 'PBANUA2',
-  14: 'Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33',
+  14: 'Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334',
   15: 'Commerzbank AG',
   16: 'Frankfurt am Main, Germany',
   17: '400886700401',
@@ -43,14 +43,14 @@ const clipboard = {
   22: 'Ukraine, Kyiv, Hrushevsky Street, building 1D',
   23: '44773154',
   24: 'PBANUA2',
-  25: 'Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33',
+  25: 'Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334',
   26: 'JP Morgan Chase Bank',
   27: 'New York ,USA',
   28: '001-1-000080',
   29: 'CHASUS33',
-  30: 'Назва компанії: БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””; IBAN код: UA643515330000026009005902082; Назва банку: АТ КБ "ПриватБанк", Адреса банку: Україна, м. Київ, вулиця Грушевського, будинок 1Д; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33',
-  31: 'Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA193515330000026000005903392; Назва банку: SC CB "PRIVATBANK"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: Commerzbank AG; Адреса банку кореспондента: Frankfurt am Main, Germany; Рахунок в банку кореспонденті: 400886700401; SWIFT код банку кореспондента: COBADEFF',
-  32: 'Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA433515330000026001035904638; Назва банку: SC CB "PRIVATBANK"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33; Банк кореспондент: JP Morgan Chase Bank; Адреса банку кореспондента: New York, USA; Рахунок в банку кореспонденті: 001-1-000080; SWIFT код банку кореспондента: CHASUS33',
+  30: 'Назва компанії: БЛАГОДІЙНА ОРГАНІЗАЦІЯ “БЛАГОДІЙНИЙ ФОНД “А- ХЕЛП УКРАЇНА””; IBAN код: UA643515330000026009005902082; Назва банку: АТ КБ "ПриватБанк", Адреса банку: Україна, м. Київ, вулиця Грушевського, будинок 1Д; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333, 334',
+  31: 'Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA193515330000026000005903392; Назва банку: SC CB "PRIVATBANK"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334; Банк кореспондент: Commerzbank AG; Адреса банку кореспондента: Frankfurt am Main, Germany; Рахунок в банку кореспонденті: 400886700401; SWIFT код банку кореспондента: COBADEFF',
+  32: 'Назва компанії: CHARITABLE ORGANIZATION “CHARITY FUND “A-HELP UKRAINE””; IBAN код: UA433515330000026001035904638; Назва банку: SC CB "PRIVATBANK"; Адреса банку: Ukraine, Kyiv, Hrushevsky Street, building 1D; Код ЄДРПОУ: 44773154; SWIFT код: PBANUA2; Адреса компанії: Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334; Банк кореспондент: JP Morgan Chase Bank; Адреса банку кореспондента: New York, USA; Рахунок в банку кореспонденті: 001-1-000080; SWIFT код банку кореспондента: CHASUS33',
 };
 
 
@@ -298,10 +298,11 @@ function But() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <ButtonFunc class="donat-button2">
+                <button
+                className="donat-button2">
                   Донат за допомогою картки
                   <img src="/assets/icons/help2.svg" alt="button-img"></img>
-                </ButtonFunc>
+                </button>
               </a>
             </div>
           </div>
@@ -388,7 +389,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Адреса компанії</div>
                   <div className="table-block__name">
-                    Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333-33
+                    Україна, м. Харків, вул. Валентинiвська, будинок 58А квартира 333, 334
                   </div>
                   <div className="table-block__image">
                     <img
@@ -487,7 +488,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Адреса компанії</div>
                   <div className="table-block__name">
-                    Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33
+                    Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334
                   </div>
                   <div className="table-block__image">
                     <img
@@ -630,7 +631,7 @@ function But() {
                 <div className="table-block__name-company">
                   <div className="table-block__title">Адреса компанії</div>
                   <div className="table-block__name">
-                  Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333-33
+                  Ukraine, Kharkiv, str. Valentynivska, building 58A, apartment 333, 334
                   </div>
                   <div className="table-block__image">
                     <img
