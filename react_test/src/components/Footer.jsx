@@ -9,13 +9,12 @@ function Footer(props) {
         <div className="footer-left-block">
           <h2>Запит на додаткову інформацію</h2>
           <span>
-            Якщо ви не знайшли інформацію, яка вас цікавить, заповніть, будь ласка, форму за
-            посиланням нижче. Ми надішлемо відповідь на вашу електронну пошту.
+            Якщо ви не знайшли інформацію, яка вас <br/>цікавить, заповніть, будь ласка, форму за<br/>
+            посиланням нижче. Ми надішлемо відповідь на <br/> вашу електронну пошту.
           </span>
-          <HashLink to="/Contacts#form" className='link_contacts'>
-          
+          <HashLink to="/Contacts#form" className="link_contacts">
             <ButtonFunc class="footer-button"> Запит на додаткову інформацію</ButtonFunc>
-            </HashLink>
+          </HashLink>
         </div>
         <div className="footer-right-block">
           <h2>Контакти</h2>
@@ -29,7 +28,11 @@ function Footer(props) {
           <div>м. Харків, вул. Повздовжня, 4</div>
           <section>
             <div className="footer-socials-icon">
-              <a href="https://www.facebook.com/A-help-Ukraine-107200221938176/" target="_blank"  rel="noreferrer">
+              <a
+                href="https://www.facebook.com/A-help-Ukraine-107200221938176/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   width="25"
                   height="24"
@@ -65,7 +68,7 @@ function Footer(props) {
               </a>
             </div>
             <div className="footer-socials-icon">
-              <a href="https://www.instagram.com/a_help_ukraine/" target="_blank"  rel="noreferrer">
+              <a href="https://www.instagram.com/a_help_ukraine/" target="_blank" rel="noreferrer">
                 <svg
                   width="25"
                   height="24"
@@ -101,7 +104,7 @@ function Footer(props) {
               </a>
             </div>
             <div className="footer-socials-icon">
-              <a href="https://t.me/+iYP6EAe1wKc0MjM6" target="_blank"  rel="noreferrer">
+              <a href="https://t.me/+iYP6EAe1wKc0MjM6" target="_blank" rel="noreferrer">
                 <svg
                   width="25"
                   height="24"
@@ -117,7 +120,11 @@ function Footer(props) {
               </a>
             </div>
             <div className="footer-socials-icon">
-              <a href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk" target="_blank"  rel="noreferrer">
+              <a
+                href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   width="25"
                   height="24"

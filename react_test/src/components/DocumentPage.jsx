@@ -1,6 +1,5 @@
 import ButtonFunc from './ButtonFunc';
-import { Link } from 'react-router-dom';
-
+import { HashLink } from 'react-router-hash-link';
 
 function DocumentPage() {
   // скролл вверх при переключении страницы
@@ -28,17 +27,18 @@ function DocumentPage() {
         </div>
         <section>Виписка з державного реєстру</section>
         <p>
-          Звіт за 2022 рік<br/> Lorem ipsum dolor sit amet, cum sapientem honestatis ea, verear labores
-          feugait sea in, cu justo suscipiantur mel. 20 січня 2023
+          Звіт за 2022 рік
+          <br /> Lorem ipsum dolor sit amet, cum sapientem honestatis ea, verear labores feugait sea
+          in, cu justo suscipiantur mel. 20 січня 2023
         </p>
         <div className="last-section_document">
           <div className="last-section__left-block">
-          Не знайшли потрібну <br/> інформацію?
+            Не знайшли потрібну <br /> інформацію?
           </div>
           <div className="last-section__right-block">
-          <Link className='link_contacts' to="/Contacts">
-            <ButtonFunc class="document-button"> Запит на додаткову інформацію</ButtonFunc>
-          </Link>
+            <HashLink to="/Contacts#form" className="link_contacts">
+              <ButtonFunc class="document-button"> Запит на додаткову інформацію</ButtonFunc>
+            </HashLink>
           </div>
         </div>
       </div>

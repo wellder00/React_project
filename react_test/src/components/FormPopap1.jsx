@@ -35,7 +35,7 @@ export default function MyModal({ isModalOpen1, setModalState1 }) {
                 </svg>
               </button>
               <div className="form-popap1__text">
-                Ваше повідомлення відправлено.<br/> Дякуюмо за вашу підтримку!
+                Ваше повідомлення відправлено.<br/> Дякуємо за вашу підтримку!
               </div>
             </Dialog.Panel>
           </div>
