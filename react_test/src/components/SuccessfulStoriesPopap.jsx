@@ -2,8 +2,7 @@ import { Dialog } from '@headlessui/react';
 import SuccessfulStoriesPopapSwiper from './SuccessfulStoriesPopapSwiper';
 
 
-export default function MyModal({isModalOpen, setModalState, selectedItem}) {
-
+export default function MyModal({isModalOpen, setModalState, selectedItem}) { 
   return (
     <>
       <div className="myModal">
@@ -36,7 +35,7 @@ export default function MyModal({isModalOpen, setModalState, selectedItem}) {
                 <div className="myModal__bg_content">
                   <div className="myModal__bg_content_left-block">
                     <div className="myModal__bg_content_left-block_img">
-                    <SuccessfulStoriesPopapSwiper/>
+                    <SuccessfulStoriesPopapSwiper img = {selectedItem.imgArr}/>
                     </div>
                   </div>
                   <div className="myModal__bg_content_right-block">

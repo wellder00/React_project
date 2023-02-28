@@ -30,7 +30,14 @@ function SuccessfulStories() {
     України. Діти були дуже задоволені і довго дякували. Чарівниками бути просто!
     Особливо, коли є справжні друзі! Ми щиро вдячні кожному, хто допомагає нашій
     команді робити дітей з деокупації трохи щасливіше!`,
-    swiper: <CurrentSwiper1 index={selectedItemIndex} handleClick={setModalState}/>
+    swiper: <CurrentSwiper1 index={selectedItemIndex} handleClick={setModalState}/>,
+    imgArr: [
+      {src: '/assets/image/cur1(1).jpg'},
+      {src: '/assets/image/cur4.jpg'},
+      {src: '/assets/image/cur2.jpg'},
+      {src: '/assets/image/cur3.jpg'},
+      {src: '/assets/image/help1.jpg'},
+    ]
     },
     
     {
@@ -48,7 +55,15 @@ function SuccessfulStories() {
     Ця історія має гарний кінець. Пес знайшов добру родину, що його прихистила. Але  таких покинутих тварин зараз багато, вони мерзнуть та голодують.
     Ми щиро вдячні нашим партнерам, які допомагають нам кормами для тварин. Це дуже важливо. Особливо взимку.
     `,
-    swiper: <CurrentSwiper2 index={selectedItemIndex} handleClick={setModalState}/>
+    swiper: <CurrentSwiper2 index={selectedItemIndex} handleClick={setModalState}/>,
+    imgArr: [
+      {src: '/assets/image/cur2(2).jpg'},
+      {src: '/assets/image/cur2(3).jpg'},
+      {src: '/assets/image/cur2(4).jpg'},
+      {src: '/assets/image/cur2(5).jpg'},
+      {src: '/assets/image/cur2(6).jpg'},
+      {src: '/assets/image/cur2(1).jpg'},
+    ]
     },
     {
       id: 229,
@@ -64,7 +79,11 @@ function SuccessfulStories() {
     Наша команда звернулася по допомогу і керівниця ГО “Фенікс13” Наталія Меркулова передала нам ходунки. Вже у наступну поїздку ми привезли їх Тамарі.
     Для Тамари це було справжнє диво.
     Ми були щасливі, що змогли допомогти їй.`,
-    swiper: <CurrentSwiper3 index={selectedItemIndex} handleClick={setModalState}/>
+    swiper: <CurrentSwiper3 index={selectedItemIndex} handleClick={setModalState }/>,
+    imgArr: [
+      {src: '/assets/image/cur3(1).jpg'},
+      {src: '/assets/image/cur3(2).jpg'},
+    ]
     },
   ];
 
