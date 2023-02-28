@@ -94,6 +94,9 @@
 }
 
 .donat-button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   width: 498px;
   height: 53px;
   box-sizing: border-box;
@@ -106,7 +109,6 @@
     top: 5px;
     padding-left: 10px;
   }
-
   &:hover {
     background-color: #FFE9A8;
   }
