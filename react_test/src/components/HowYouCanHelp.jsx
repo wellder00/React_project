@@ -398,7 +398,7 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(30); togglePopup(30)}}>
+                <ButtonFunc class="table-block__button" onClick={() => {togglePopup(30); clipboardCopying(30)}}>
                   Скопіювати все<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[1] && (
@@ -541,7 +541,7 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(31); togglePopup(31)}}>
+                <ButtonFunc class="table-block__button" onClick={() => {togglePopup(31); clipboardCopying(31)}}>
                   Скопіювати все<img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[2] && (
@@ -684,7 +684,7 @@ function But() {
                     ></img>
                   </div>
                 </div>
-                <ButtonFunc class="table-block__button" onClick={() => {clipboardCopying(32); togglePopup(32)}}>
+                <ButtonFunc class="table-block__button" onClick={() => {togglePopup(32); clipboardCopying(32)}}>
                   Скопіювати все <img src="/assets/icons/copy_active.svg" alt="copy_active"></img>
                 </ButtonFunc>
                 {pageState[3] && (
