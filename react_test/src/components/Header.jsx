@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import ButtonFunc from './ButtonFunc';
 import { HashLink } from 'react-router-hash-link';
 
-
 function But() {
   const [visiblePopup1, setvisiblePopup1] = React.useState(false);
   const [visiblePopup2, setvisiblePopup2] = React.useState(false);
@@ -54,11 +53,10 @@ function But() {
   return (
     <div className="header">
       <div className="header-container _container">
-      
-          <HashLink smooth to="/#hero" className="logo header__logo">        
-             <img  src="/assets/icons/1.svg" alt="Logo" />          
-          </HashLink>
-        
+        <HashLink smooth to="/#hero" className="logo header__logo">
+          <img src="/assets/icons/1.svg" alt="Logo" />
+        </HashLink>
+
         <nav className="header__nav">
           <ul className="header__menu-list">
             <li onClick={togglevisiblePopup1} className="header__nav" ref={sortRef1}>
@@ -100,9 +98,9 @@ function But() {
               )}
             </li>
             <li className="header__nav">
-              <Link to="/Contacts" className="header__nav-hover" href="#!">
+              <HashLink to="/Contacts#formTop" className="header__nav-hover">
                 Контакти
-              </Link>
+              </HashLink>
             </li>
             <li onClick={togglevisiblePopup3} className="header__nav" ref={sortRef3}>
               <a className="header__nav-hover" href="#!">
@@ -119,11 +117,10 @@ function But() {
             </li>
           </ul>
         </nav>
-       
-          <HashLink smooth to="/#donate">
-           <ButtonFunc class="header-button">Допомогти</ButtonFunc>
-         </HashLink>
-        
+
+        <HashLink smooth to="/#donate">
+          <ButtonFunc class="header-button">Допомогти</ButtonFunc>
+        </HashLink>
       </div>
     </div>
   );

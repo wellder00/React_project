@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import CurrentSwiper from './CurrentSwiper1';
+import CurrentSwiper1 from './CurrentSwiper1';
+import CurrentSwiper2 from './CurrentSwiper2';
+import CurrentSwiper3 from './CurrentSwiper3';
 import SuccessfulStoriesPopap from './SuccessfulStoriesPopap';
 
 function SuccessfulStoriesPage() {
@@ -31,9 +33,18 @@ function SuccessfulStoriesPage() {
     України. Діти були дуже задоволені і довго дякували. \n Чарівниками бути просто!
     Особливо, коли є справжні друзі! Ми щиро вдячні кожному, хто допомагає нашій
     команді робити дітей з деокупації трохи щасливіше!`,
+    swiper: <CurrentSwiper1 index={selectedItemIndex} handleClick={setModalState}/>,
+    imgArr: [
+      {src: '/assets/image/cur1(1).jpg'},
+      {src: '/assets/image/cur4.jpg'},
+      {src: '/assets/image/cur2.jpg'},
+      {src: '/assets/image/cur3.jpg'},
+      {src: '/assets/image/help1.jpg'},
+    ]
     },
+    
     {
-      id: 21,
+      id: 228,
       title: 'Видачу корму для родин, що прихистили безпритульних тварин',
       description: `Ми регулярно закуповуємо корм і віддаємо його родинам, які дали прихисток
     безпритульним тваринам.`,
@@ -47,9 +58,18 @@ function SuccessfulStoriesPage() {
     Ця історія має гарний кінець. Пес знайшов добру родину, що його прихистила. Але  таких покинутих тварин зараз багато, вони мерзнуть та голодують.
     Ми щиро вдячні нашим партнерам, які допомагають нам кормами для тварин. Це дуже важливо. Особливо взимку.
     `,
+    swiper: <CurrentSwiper2 index={selectedItemIndex} handleClick={setModalState}/>,
+    imgArr: [
+      {src: '/assets/image/cur2(2).jpg'},
+      {src: '/assets/image/cur2(3).jpg'},
+      {src: '/assets/image/cur2(4).jpg'},
+      {src: '/assets/image/cur2(5).jpg'},
+      {src: '/assets/image/cur2(6).jpg'},
+      {src: '/assets/image/cur2(1).jpg'},
+    ]
     },
     {
-      id: 22,
+      id: 229,
       title: 'Допомога малобільним людям',
       description: `Наш команда разом із ГО “Фенікс” придбали ходунки для Тамари - літньої мешканки міста
     Куп’янську. Це місто та його жителі дуже постраждали внаслідок російської військової
@@ -62,11 +82,16 @@ function SuccessfulStoriesPage() {
     Наша команда звернулася по допомогу і керівниця ГО “Фенікс13” Наталія Меркулова передала нам ходунки. Вже у наступну поїздку ми привезли їх Тамарі.
     Для Тамари це було справжнє диво.
     Ми були щасливі, що змогли допомогти їй.`,
+    swiper: <CurrentSwiper3 index={selectedItemIndex} handleClick={setModalState }/>,
+    imgArr: [
+      {src: '/assets/image/cur3(1).jpg'},
+      {src: '/assets/image/cur3(2).jpg'},
+    ]
     },
   ];
 
   return (
-    <div>
+    <div className='successful-stories__page'>
       <div className="successful-stories-wrapper _container">
         <h2 className="successful-stories__page-tetle">Успішні історії</h2>
         <div className="card-block-stories-wrapper">
@@ -74,7 +99,7 @@ function SuccessfulStoriesPage() {
             return (
               <div className="card-block-stories" key={item.id}>
                 <div className="card-block-stories-img">
-                  <CurrentSwiper index={index} handleClick={setModalState} />
+                {item.swiper}
                 </div>
                 <div onClick={() => setModalState(true, index)}>
                   <h4>{item.title}</h4>

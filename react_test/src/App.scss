@@ -55,4 +55,12 @@ body {
   flex-shrink: 0;
 }
 
+.bredcrumbs_link{
+  text-decoration: none;
+  :hover{
+    text-decoration: underline;
+  }
+}
+
+
 

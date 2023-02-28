@@ -22,12 +22,11 @@ function Contacts() {
     setModalOpen(state);
   };
 
-   const setModalState1 = (state) => {
+  const setModalState1 = (state) => {
     setModalOpen1(state);
   };
 
-
- useEffect(() => {
+  useEffect(() => {
     if (nameError || emeilError || textError || !checked) {
       setFormValid(false);
     } else {
@@ -36,7 +35,7 @@ function Contacts() {
   }, [nameError, emeilError, textError, checked]);
 
   useEffect(() => {
-    if (nameError || emeilError || textError ) {
+    if (nameError || emeilError || textError) {
       setFormValid1(false);
     } else {
       setFormValid1(true);
@@ -97,7 +96,7 @@ function Contacts() {
   };
 
   return (
-    <div className="contacts">
+    <div id="formTop" className="contacts">
       <div className="contacts__wrapper _container">
         <div className="contacts__title">Контакти</div>
         <div className="first-contacts-block">
@@ -111,10 +110,16 @@ function Contacts() {
               <p>Контактний номер</p>
               <div>+380 (96) 052 72 91</div>
               <p>Email</p>
-              <div className = "contacts-mail"><a href="mailto:3232605@gmail.com">3232605@gmail.com</a></div>
+              <div className="contacts-mail">
+                <a href="mailto:3232605@gmail.com">3232605@gmail.com</a>
+              </div>
               <section className="contacts-socials-icon">
                 <div className="footer-socials-icon-contacts">
-                  <a href="https://www.facebook.com/A-help-Ukraine-107200221938176/">
+                  <a
+                    href="https://www.facebook.com/A-help-Ukraine-107200221938176/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       width="48"
                       height="48"
@@ -149,8 +154,12 @@ function Contacts() {
                     </svg>
                   </a>
                 </div>
-                <div className="footer-socials-icon-contacts">
-                  <a href="https://www.instagram.com/a_help_ukraine/">
+                <div id="form" className="footer-socials-icon-contacts">
+                  <a
+                    href="https://www.instagram.com/a_help_ukraine/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       width="48"
                       height="48"
@@ -205,7 +214,7 @@ function Contacts() {
                   </a>
                 </div>
                 <div className="footer-socials-icon-contacts">
-                  <a href="https://t.me/+iYP6EAe1wKc0MjM6">
+                  <a href="https://t.me/+iYP6EAe1wKc0MjM6" target="_blank" rel="noreferrer">
                     <svg
                       width="48"
                       height="48"
@@ -229,7 +238,11 @@ function Contacts() {
                   </a>
                 </div>
                 <div className="footer-socials-icon-contacts">
-                  <a href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk">
+                  <a
+                    href="https://invite.viber.com/?g2=AQBLElfynNLHV094mpq21X4%2FlgNGxrb4Bymfpxtgo7dfBSK5SbPwvqkvpW9MWYpT&lang=uk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       width="48"
                       height="48"
@@ -330,7 +343,9 @@ function Contacts() {
                 <label
                   onClick={() => setModalState(true)}
                   className={
-                    checked === false && formValid1 ? 'right-block-check-erorr' : 'right-block-check'
+                    checked === false && formValid1
+                      ? 'right-block-check-erorr'
+                      : 'right-block-check'
                   }
                 >
                   Я погоджуюся з політикою конфіденційності
@@ -342,8 +357,8 @@ function Contacts() {
                 )}
               </div>
               <button
-               onClick={() => setModalState1(true)}
-               type="submit"
+                onClick={() => setModalState1(true)}
+                type="submit"
                 disabled={!formValid}
                 className={formValid ? 'support-button' : 'support-button__disabled'}
               >
@@ -354,7 +369,7 @@ function Contacts() {
         </div>
       </div>
       <FormPopap isModalOpen={isModalOpen} setModalState={setModalState} />
-       <FormPopap1 isModalOpen1={isModalOpen1} setModalState1={setModalState1} />
+      <FormPopap1 isModalOpen1={isModalOpen1} setModalState1={setModalState1} />
     </div>
   );
 }

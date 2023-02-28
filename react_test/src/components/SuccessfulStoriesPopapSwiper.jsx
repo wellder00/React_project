@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-function Slider() {
+function Slider({img}) {
   return (
     <div className="successful-popap-swiper">
       <Swiper
@@ -18,21 +18,17 @@ function Slider() {
         spaceBetween={40}
         slidesPerView={1}
       >
-        <SwiperSlide>
-          <div className="successful-popap-swiper__card-block">
-            <img src="/assets/image/1.jpg" alt="1" />
+        {img.map((item, index) => {
+            return (
+          <SwiperSlide key={`${item}_${index}`}>
+          <div className="successful-popap-swiper__card-block">            
+            <img src={item.src} alt={item.src} />
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="successful-popap-swiper__card-block">
-            <img src="/assets/image/cur4.jpg" alt="1" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="successful-popap-swiper__card-block">
-            <img src="/assets/image/cur2.jpg" alt="1" />
-          </div>
-        </SwiperSlide>
+         </SwiperSlide>
+            
+            );
+          })}
+   
         <div className="popup-button-block">
           <div className="successful-button-prev-slide">
             <img src="/assets/icons/arrowLeft.svg" alt="1" />

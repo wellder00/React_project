@@ -51,8 +51,8 @@ const Breadcrumbs = () => {
   return (
     <div className="breadcrumbs">
       {breadcrumbs.map(({ breadcrumb, match }, index) => (
-        <div key={`${breadcrumb}_${match.url}`}>
-          <Link to={match.url || ''}>{breadcrumb}</Link>
+        <div key={`${match}-${match}`} >
+          <Link className='bredcrumbs_link' to={match.url || ''}>{breadcrumb}</Link>
           {index < breadcrumbs.length - 1 && (
             <svg
               width="24"
@@ -64,9 +64,9 @@ const Breadcrumbs = () => {
               <path
                 d="M9 18L15 12L9 6"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           )}
